@@ -692,8 +692,6 @@ QuantC is released under the [MIT License](LICENSE).
 
 <div align="center">
 
-Made with ❤️ by the QuantC contributors.
-
-*Fast to write. Fast to run.*
+Fast to write. Fast to run.
 
 </div>
