@@ -11,7 +11,7 @@
 
 > *Expressive like Java. Fast like C++. Extensible like Haskell.*
 
-```quantc
+```java
 class Vector2D {
     public float x, y;
 
