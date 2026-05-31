@@ -3,9 +3,21 @@
   "patterns": [
     { "include": "#comments" },
     { "include": "#strings" },
-    { "include": "#keywords" },
-    { "include": "#types" },
-    { "include": "#builtins" },
+
+    { "include": "#control-flow" },
+    { "include": "#declarations" },
+    { "include": "#modifiers" },
+    { "include": "#async" },
+    { "include": "#operators-words" },
+    { "include": "#literals" },
+
+    { "include": "#types-primitive" },
+    { "include": "#types-collections" },
+
+    { "include": "#builtins-io" },
+    { "include": "#builtins-math" },
+    { "include": "#builtins-memory" },
+
     { "include": "#numbers" },
     { "include": "#class-names" },
     { "include": "#function-calls" },
@@ -14,7 +26,6 @@
   ],
 
   "repository": {
-
     "comments": {
       "patterns": [
         {
@@ -45,29 +56,109 @@
       ]
     },
 
-    "keywords": {
+    "control-flow": {
       "patterns": [
         {
-          "name": "keyword.control.qc",
-          "match": "\\b(function|address|pointing|reference|wait|await|return|if|else|while|for|true|false|continue|break|unsigned|switch|case|default|public|private|mutable|constexpr|abstract|class|const|global|local|this|new|try|throw|catch|null|super|instanceof|and|or|not|delete|extends|pointer|override|enum)\\b"
+          "name": "keyword.control.flow.qc",
+          "match": "\\b(if|else|while|for|switch|case|default|break|continue|return|try|catch|throw)\\b"
         }
       ]
     },
 
-    "types": {
+    "declarations": {
       "patterns": [
         {
-          "name": "storage.type.qc",
-          "match": "\\b(byte|short|int|long|float|double|array|hashmap|list|char|string|boolean|void)\\b"
+          "name": "keyword.declaration.qc",
+          "match": "\\b(function|class|enum|extends|new|delete|override)\\b"
         }
       ]
     },
 
-    "builtins": {
+    "modifiers": {
       "patterns": [
         {
-          "name": "support.function.builtin.qc",
-          "match": "\\b(print|sqrt|abs|sin|cos|tan|min|max|pow|atan|atan2|acos|asin|ceil|floor|exp|log|log10|cosh|sinh|tanh|acosh|asinh|atanh)\\b"
+          "name": "storage.modifier.scope.qc",
+          "match": "\\b(global|local)\\b"
+        },
+        {
+          "name": "storage.modifier.access.qc",
+          "match": "\\b(public|private|protected)\\b"
+        },
+        {
+          "name": "storage.modifier.memory.qc",
+          "match": "\\b(const|mutable|unsigned|raw|shared|unique|pointer|reference|instanceof|this)\\b"
+        }
+      ]
+    },
+
+    "async": {
+      "patterns": [
+        {
+          "name": "keyword.control.async.qc",
+          "match": "\\b(wait|await)\\b"
+        }
+      ]
+    },
+
+    "operators-words": {
+      "patterns": [
+        {
+          "name": "keyword.operator.word.qc",
+          "match": "\\b(and|or|not)\\b"
+        }
+      ]
+    },
+
+    "literals": {
+      "patterns": [
+        {
+          "name": "constant.language.qc",
+          "match": "\\b(true|false|null)\\b"
+        }
+      ]
+    },
+
+    "types-primitive": {
+      "patterns": [
+        {
+          "name": "keyword.declaration.q",
+          "match": "\\b(int|float|double|char|string|boolean|void|byte|short|long)\\b"
+        }
+      ]
+    },
+
+    "types-collections": {
+      "patterns": [
+        {
+          "name": "entity.name.type.container.qc",
+          "match": "\\b(hashmap|list|array)\\b"
+        }
+      ]
+    },
+
+    "builtins-io": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.io.qc",
+          "match": "\\b(print)\\b"
+        }
+      ]
+    },
+
+    "builtins-math": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.math.qc",
+          "match": "\\b(sqrt|abs|sin|cos|tan|min|max|pow|log|exp|floor|ceil)\\b"
+        }
+      ]
+    },
+
+    "builtins-memory": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.memory.qc",
+          "match": "\\b(pointing|address)\\b"
         }
       ]
     },

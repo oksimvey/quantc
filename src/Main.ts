@@ -2,9 +2,11 @@ import * as vscode from "vscode";
 
 import { ProgramNode } from "./extension/ast/ProgramNode";
 import { VariableDeclarationNode } from "./extension/ast/VariableDeclarationNode";
+import { AssignmentNode } from "./extension/ast/AssignmentNode";
 import { IntegerLiteralNode } from "./extension/ast/IntegerLiteralNode";
 import { StringLiteralNode } from "./extension/ast/StringLiteralNode";
 import { ExpressionNode } from "./extension/ast/ExpressionNode";
+import { ASTNode } from "./extension/ast/ASTNode";
 import { SemanticAnalyzer } from "./extension/semantic/SemanticAnalyser";
 import { Diagnostic as QcDiagnostic } from "./extension/semantic/Diagnostic";
 import { Token } from "./extension/lexer/Token";
@@ -58,7 +60,7 @@ export function deactivate(): void {
 }
 
 function analyzeDocument(document: vscode.TextDocument): void {
-    const program = parseVariableDeclarations(document);
+    const program = parseProgram(document);
     const analyzer = new SemanticAnalyzer();
     const qcDiagnostics = analyzer.analyze(program);
 
@@ -83,25 +85,23 @@ function toVsCodeDiagnostic(
     );
 }
 
-function parseVariableDeclarations(document: vscode.TextDocument): ProgramNode {
-    const declarations: VariableDeclarationNode[] = [];
+function parseProgram(document: vscode.TextDocument): ProgramNode {
+    const statements: ASTNode[] = [];
     const text = document.getText();
 
     for (let lineIndex = 0; lineIndex < document.lineCount; lineIndex++) {
         const line = document.lineAt(lineIndex);
-        const declaration = parseVariableDeclarationLine(
-            text,
-            line.text,
-            document.offsetAt(line.range.start),
-            lineIndex
-        );
+        const lineOffset = document.offsetAt(line.range.start);
+        const statement =
+            parseVariableDeclarationLine(text, line.text, lineOffset, lineIndex) ??
+            parseAssignmentLine(text, line.text, lineOffset, lineIndex);
 
-        if (declaration) {
-            declarations.push(declaration);
+        if (statement) {
+            statements.push(statement);
         }
     }
 
-    return new ProgramNode(declarations);
+    return new ProgramNode(statements);
 }
 
 function parseVariableDeclarationLine(
@@ -171,6 +171,47 @@ function parseVariableDeclarationLine(
         nameToken,
         initializer
     );
+}
+
+function parseAssignmentLine(
+    source: string,
+    lineText: string,
+    lineOffset: number,
+    lineIndex: number
+): AssignmentNode | undefined {
+    const trimmed = lineText.trim();
+
+    if (!trimmed || trimmed.startsWith("//")) {
+        return undefined;
+    }
+
+    const tokens = scanLineTokens(lineText, lineOffset, lineIndex);
+
+    if (tokens.length < 3) {
+        return undefined;
+    }
+
+    const nameToken = tokens[0];
+    const equalsToken = tokens[1];
+
+    if (
+        nameToken.type !== TokenType.Identifier ||
+        equalsToken.type !== TokenType.Operator ||
+        equalsToken.lexeme !== "="
+    ) {
+        return undefined;
+    }
+
+    const value = parseExpressionAt(source, tokens, 2);
+
+    if (!value) {
+        return undefined;
+    }
+
+    const semicolon = tokens.find(token => token.type === TokenType.Semicolon);
+    const endToken = semicolon ?? tokens[tokens.length - 1];
+
+    return new AssignmentNode(nameToken, endToken, nameToken, value);
 }
 
 function scanLineTokens(lineText: string, lineOffset: number, lineIndex: number): Token[] {
@@ -247,7 +288,15 @@ function parseInitializer(
         return undefined;
     }
 
-    const valueToken = tokens[equalsIndex + 1];
+    return parseExpressionAt(source, tokens, equalsIndex + 1);
+}
+
+function parseExpressionAt(
+    source: string,
+    tokens: Token[],
+    index: number
+): ExpressionNode | undefined {
+    const valueToken = tokens[index];
 
     if (!valueToken || valueToken.type === TokenType.Semicolon) {
         return undefined;

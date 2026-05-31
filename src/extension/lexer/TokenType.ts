@@ -1,30 +1,99 @@
 export enum TokenType {
 
-    Identifier,
+    // ── Trivia ────────────────────────────────────────────────────────────────
+    Whitespace,
+    Newline,
+    LineComment,
+    BlockComment,
 
+    // ── Identifiers & reserved words ─────────────────────────────────────────
+    Identifier,
     Keyword,
     Type,
     Builtin,
+    BooleanLiteral,
+    NullLiteral,
 
-    Number,
-    String,
-    Character,
+    // ── Literals ─────────────────────────────────────────────────────────────
+    IntegerLiteral,
+    FloatLiteral,
+    StringLiteral,
+    CharLiteral,
 
-    Operator,
+    // ── Arithmetic operators ──────────────────────────────────────────────────
+    Plus,        // +
+    Minus,       // -
+    Star,        // *
+    Slash,       // /
+    Percent,     // %
+    StarStar,    // **
 
-    Dot,
-    Comma,
-    Colon,
-    Semicolon,
+    // ── Assignment operators ──────────────────────────────────────────────────
+    Equal,               // =
+    PlusEqual,           // +=
+    MinusEqual,          // -=
+    StarEqual,           // *=
+    SlashEqual,          // /=
+    PercentEqual,        // %=
+    StarStarEqual,       // **=
+    AmpersandEqual,      // &=
+    PipeEqual,           // |=
+    CaretEqual,          // ^=
+    LessLessEqual,       // <<=
+    GreaterGreaterEqual, // >>=
 
-    LParen,
-    RParen,
+    // ── Comparison operators ──────────────────────────────────────────────────
+    EqualEqual,   // ==
+    BangEqual,    // !=
+    Less,         // <
+    LessEqual,    // <=
+    Greater,      // >
+    GreaterEqual, // >=
 
-    LBrace,
-    RBrace,
+    // ── Logical operators ─────────────────────────────────────────────────────
+    AmpersandAmpersand, // &&
+    PipePipe,           // ||
+    Bang,               // !
 
-    LBracket,
-    RBracket,
+    // ── Bitwise operators ─────────────────────────────────────────────────────
+    Ampersand,      // &
+    Pipe,           // |
+    Caret,          // ^
+    Tilde,          // ~
+    LessLess,       // <<
+    GreaterGreater, // >>
 
-    EOF
+    // ── Increment / decrement ─────────────────────────────────────────────────
+    PlusPlus,   // ++
+    MinusMinus, // --
+
+    // ── Null-safety & ternary ─────────────────────────────────────────────────
+    Question,         // ?
+    QuestionQuestion, // ??
+    QuestionDot,      // ?.
+    QuestionColon,    // ?:
+
+    // ── Punctuation ───────────────────────────────────────────────────────────
+    Dot,        // .
+    DotDot,     // ..
+    DotDotDot,  // ...
+    Comma,      // ,
+    Colon,      // :
+    ColonColon, // ::
+    Semicolon,  // ;
+
+    // ── Grouping ──────────────────────────────────────────────────────────────
+    LParen,   // (
+    RParen,   // )
+    LBrace,   // {
+    RBrace,   // }
+    LBracket, // [
+    RBracket, // ]
+
+    // ── Custom Unicode operators ──────────────────────────────────────────────
+    CustomOperator,
+
+    // ── Special ──────────────────────────────────────────────────────────────
+    Unknown,
+    EOF,
 }

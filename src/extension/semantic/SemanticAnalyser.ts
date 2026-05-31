@@ -1,6 +1,7 @@
 import { ProgramNode } from "../ast/ProgramNode";
 import { ASTNode } from "../ast/ASTNode";
 import { VariableDeclarationNode } from "../ast/VariableDeclarationNode";
+import { AssignmentNode } from "../ast/AssignmentNode";
 import { ExpressionNode } from "../ast/ExpressionNode";
 
 import { IntegerLiteralNode } from "../ast/IntegerLiteralNode";
@@ -43,8 +44,10 @@ export class SemanticAnalyzer {
             return;
         }
 
-        // futuro:
-        // if (node instanceof ClassDeclarationNode) ...
+        if (node instanceof AssignmentNode) {
+            this.analyzeAssignment(node);
+            return;
+        }
 
     }
 
@@ -72,14 +75,15 @@ export class SemanticAnalyzer {
             );
         }
 
-        // 3. const precisa initializer
+        // 3. const/constexpr precisa initializer
         if (
-            node.mutability === MutabilityType.Const &&
+            (node.mutability === MutabilityType.Const ||
+                node.mutability === MutabilityType.Constexpr) &&
             !node.initializer
         ) {
             this.error(
                 node.nameToken,
-                `Const variable must be initialized`
+                `${node.mutability === MutabilityType.Constexpr ? "Constexpr" : "Const"} variable must be initialized`
             );
         }
 
@@ -117,6 +121,38 @@ export class SemanticAnalyzer {
                     `Cannot assign '${initType.name}' to '${type.name}'`
                 );
             }
+        }
+    }
+
+    // =========================
+    // ASSIGNMENT
+    // =========================
+    private analyzeAssignment(node: AssignmentNode) {
+        const symbol = this.scope.resolve(node.nameToken.lexeme);
+
+        if (!symbol) {
+            this.error(
+                node.nameToken,
+                `Undefined variable '${node.nameToken.lexeme}'`
+            );
+            return;
+        }
+
+        if (!symbol.mutable) {
+            this.error(
+                node.nameToken,
+                `Cannot assign to const variable '${node.nameToken.lexeme}'`
+            );
+            return;
+        }
+
+        const valueType = this.resolveExpressionType(node.value);
+
+        if (valueType && valueType.name !== symbol.type.name) {
+            this.error(
+                node.value.start,
+                `Cannot assign '${valueType.name}' to '${symbol.type.name}'`
+            );
         }
     }
 
