@@ -14,7 +14,8 @@ export const KEYWORDS = new Set([
     'case',
     'default',
     'public',
-    'protected',
+    'mutable',
+    'constexpr',
     'abstract',
     'class',
     'private',
@@ -24,6 +25,8 @@ export const KEYWORDS = new Set([
     'this',
     'new',
     'try',
+    'wait',
+    'await',
     'throw',
     'catch',
     'null',
@@ -36,6 +39,9 @@ export const KEYWORDS = new Set([
     'extends',
     'pointer',
     'override',
+    'address',
+    'pointing',
+    'reference',
     'enum'
 ]);
 
@@ -79,8 +85,5 @@ export const BUILTINS = new Set([
     'tanh',
     'acosh',
     'asinh',
-    'atanh',
-    'address',
-    'pointing',
-    'reference'
+    'atanh'
 ]);
