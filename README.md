@@ -11,6 +11,8 @@
 
 > *Expressive like Java. Fast like C++. Extensible like Haskell.*
 
+</div>
+
 ```java
 class Vector2D {
     public float x, y;
@@ -33,8 +35,6 @@ function main() -> void {
     print(c.x);           // 4.0
 }
 ```
-
-</div>
 
 ---
 
