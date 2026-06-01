@@ -70,7 +70,7 @@
       "patterns": [
         {
           "name": "keyword.declaration.qc",
-          "match": "\\b(class|enum|extends|new|delete|override|abstract|function)\\b"
+          "match": "\\b(class|enum|extends|new|delete|override|abstract|function|operator)\\b"
         }
       ]
     },
