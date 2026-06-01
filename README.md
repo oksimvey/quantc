@@ -4,6 +4,7 @@
 
 ### A modern, expressive compiled language that transpiles to C++
 
+![Status](https://img.shields.io/badge/status-in%20development-orange?style=flat-square)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![VS Code Extension](https://img.shields.io/badge/VS%20Code-Extension-007ACC?logo=visual-studio-code)](https://marketplace.visualstudio.com)
 [![C++ Backend](https://img.shields.io/badge/Backend-C%2B%2B17-00599C?logo=cplusplus)](https://isocpp.org)
