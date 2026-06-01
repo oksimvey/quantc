@@ -26,18 +26,13 @@ export enum MutabilityType {
  * Defines where a variable exists and is valid.
  *
  * - Global: exists for the entire program lifetime.
- * - Instance: exists only in the active instance
+ * - Member: exists only in the active instance
  * - Local: exists only within a function/block scope.
  */
 export enum ScopeType {
     Global,
-    Instance,
+    Member,
     Local
-}
-
-export enum Misc {
-    Pointer,
-    Unsigned
 }
 
 /**
@@ -52,4 +47,11 @@ export enum MemoryModifier {
     Raw,
     Unique,
     Shared
+}
+
+export enum Modifiers {
+    MemoryModifier,
+    ScopeType,
+    MutabilityType,
+    VisibilityType
 }

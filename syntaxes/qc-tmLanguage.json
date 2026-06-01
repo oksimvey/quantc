@@ -61,7 +61,7 @@
       "patterns": [
         {
           "name": "keyword.control.flow.qc",
-          "match": "\\b(if|else|while|for|switch|case|default|break|continue|return|try|catch|throw)\\b"
+          "match": "\\b(if|else|while|for|switch|case|default|break|continue|return|try|catch|throw|super)\\b"
         }
       ]
     },
@@ -70,7 +70,7 @@
       "patterns": [
         {
           "name": "keyword.declaration.qc",
-          "match": "\\b(function|class|enum|extends|new|delete|override)\\b"
+          "match": "\\b(class|enum|extends|new|delete|override|abstract|function)\\b"
         }
       ]
     },
@@ -79,7 +79,7 @@
       "patterns": [
         {
           "name": "storage.modifier.scope.qc",
-          "match": "\\b(global|instance)\\b"
+          "match": "\\b(global|member)\\b"
         },
         {
           "name": "storage.modifier.access.qc",
@@ -87,7 +87,7 @@
         },
         {
           "name": "storage.modifier.memory.qc",
-          "match": "\\b(const|mutable|unsigned|raw|shared|unique|pointer|reference|instanceof|this)\\b"
+          "match": "\\b(const|mutable|instanceof|this)\\b"
         }
       ]
     },
@@ -123,7 +123,7 @@
       "patterns": [
         {
           "name": "keyword.declaration.q",
-          "match": "\\b(int|float|double|char|string|boolean|void|byte|short|long)\\b"
+          "match": "\\b(int|float|double|char|string|boolean|void|byte|short|long|uint|ubyte|ulong|ushort)\\b"
         }
       ]
     },
@@ -132,7 +132,7 @@
       "patterns": [
         {
           "name": "entity.name.type.container.qc",
-          "match": "\\b(hashmap|list|array)\\b"
+          "match": "\\b(HashMap|List|Array|Pointer|Reference|SharedPointer|UniquePointer)\\b"
         }
       ]
     },
@@ -159,7 +159,7 @@
       "patterns": [
         {
           "name": "support.function.builtin.memory.qc",
-          "match": "\\b(pointing|address)\\b"
+          "match": "\\b(pointing|getAddress|getUniqueAddress|getSharedAddress)\\b"
         }
       ]
     },

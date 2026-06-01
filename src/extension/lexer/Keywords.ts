@@ -23,13 +23,15 @@ export const CONTROL_FLOW_KEYWORDS = new Set<string>([
     "return",
     "break",
     "continue",
+    "super",
+    "abstract",
 ]);
 
 // ─────────────────────────────────────────────────────────────
 // Declarations / language constructs
 export const DECLARATION_KEYWORDS = new Set<string>([
-    "function",
     "class",
+    "function",
     "enum",
     "extends",
     "new",
@@ -41,7 +43,7 @@ export const DECLARATION_KEYWORDS = new Set<string>([
 // Visibility / scope
 export const SCOPE_KEYWORDS = new Set<string>([
     "global",
-    "instance",
+    "member",
 ]);
 
 // ─────────────────────────────────────────────────────────────
@@ -57,12 +59,6 @@ export const ACCESS_KEYWORDS = new Set<string>([
 export const TYPE_MODIFIERS = new Set<string>([
     "const",
     "mutable",
-    "unsigned",
-    "raw",
-    "shared",
-    "unique",
-    "pointer",
-    "reference",
     "instanceof",
     "this",
 ]);
@@ -126,7 +122,13 @@ export const MATH_BUILTINS = new Set<string>([
 
 export const MEMORY_BUILTINS = new Set<string>([
     "pointing",
-    "address",
+    "getAddress",
+    "getUniqueAddress",
+    "getSharedAddress",
+    "Pointer",
+    "SharedPointer",
+    "UniquePointer",
+    "Reference",
 ]);
 
 export const BUILTINS = new Set<string>([
@@ -138,7 +140,9 @@ export const BUILTINS = new Set<string>([
 // ─────────────────────────────────────────────────────────────
 // Primitive types
 export const PRIMITIVE_TYPES = new Set<string>([
+    "auto",
     "int",
+    "uint",
     "float",
     "double",
     "char",
@@ -146,16 +150,19 @@ export const PRIMITIVE_TYPES = new Set<string>([
     "boolean",
     "void",
     "byte",
+    "ubyte",
     "short",
+    "ushort",
     "long",
+    "ulong",
 ]);
 
 // ─────────────────────────────────────────────────────────────
 // Collection / container types
 export const COLLECTION_TYPES = new Set<string>([
-    "hashmap",
-    "list",
-    "array",
+    "HashMap",
+    "List",
+    "Array",
 ]);
 
 // ─────────────────────────────────────────────────────────────

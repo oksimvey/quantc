@@ -156,7 +156,7 @@ QuantC's keyword set is designed to feel immediately familiar to Java and C++ de
 | `public` / `private` | Access modifiers for class members |
 | `const` | Immutable binding (value cannot be reassigned) |
 | `mutable` | Explicitly allows mutation inside `const` contexts |
-| `global` / `instance` | Scope qualifiers for variable declarations |
+| `global` / `member` | Scope qualifiers for variable declarations |
 | `function` | Declares a function or method |
 | `return` | Returns a value from a function |
 | `if` / `else` | Conditional branching |
