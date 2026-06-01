@@ -1,6 +1,7 @@
 <div align="center">
 
-# ⚡ QuantC
+<img src="icons/quantc-icon.svg" width="22" style="vertical-align: middle;" />
+# QuantC
 
 ### A modern, expressive compiled language that transpiles to C++
 
