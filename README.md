@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="icons/quantc-icon.svg" width="100" style="vertical-align: middle;" />
+<img src="icons/quantc-icon.svg" width="150" style="vertical-align: middle;" />
 
 ### A modern, expressive compiled language that transpiles to C++
 
