@@ -1,7 +1,8 @@
 <div align="center">
 
-<img src="icons/quantc-icon.svg" width="22" style="vertical-align: middle;" />
-# QuantC
+<img src="icons/quantc-icon.svg" width="40" style="vertical-align: middle;" />
+
+#  QuantC
 
 ### A modern, expressive compiled language that transpiles to C++
 
