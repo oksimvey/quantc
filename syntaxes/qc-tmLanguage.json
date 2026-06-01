@@ -3,6 +3,7 @@
   "patterns": [
     { "include": "#comments" },
     { "include": "#strings" },
+    {"include": "#angle-brackets"},
 
     { "include": "#control-flow" },
     { "include": "#declarations" },
@@ -78,7 +79,7 @@
       "patterns": [
         {
           "name": "storage.modifier.scope.qc",
-          "match": "\\b(global|local)\\b"
+          "match": "\\b(global|instance)\\b"
         },
         {
           "name": "storage.modifier.access.qc",
@@ -189,12 +190,20 @@
         }
       ]
     },
+    "angle-brackets": {
+      "patterns": [
+        {
+          "name": "entity.name.type.container.qc",
+          "match": "[<>]"
+        }
+      ]
+    },
 
     "operators": {
       "patterns": [
         {
           "name": "keyword.operator.qc",
-          "match": "(==|!=|<=|>=|\\+\\+|--|&&|\\|\\||<<|>>|->|[+\\-*/%=!<>&|.,;:{}\\[\\]()])"
+          "match": "(==|!=|<=|>=|\\+\\+|--|&&|\\|\\||<<|>>|->|[+\\-*/%=!&|.,;:{}\\[\\]()])"
         }
       ]
     },

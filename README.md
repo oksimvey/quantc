@@ -153,12 +153,10 @@ QuantC's keyword set is designed to feel immediately familiar to Java and C++ de
 | `new` | Heap-allocates a new instance |
 | `delete` | Frees a heap-allocated object |
 | `this` | Reference to the current instance |
-| `super` | Reference to the parent class |
 | `public` / `private` | Access modifiers for class members |
 | `const` | Immutable binding (value cannot be reassigned) |
-| `constexpr` | Compile-time constant expression |
 | `mutable` | Explicitly allows mutation inside `const` contexts |
-| `global` / `local` | Scope qualifiers for variable declarations |
+| `global` / `instance` | Scope qualifiers for variable declarations |
 | `function` | Declares a function or method |
 | `return` | Returns a value from a function |
 | `if` / `else` | Conditional branching |

@@ -104,5 +104,3 @@ Good moment to map the full picture before going deeper. Here's the complete pip
 ---
 
 That's the full picture. Each layer depends only on the one above it — the type checker never touches the lexer directly, the language service never re-parses source. Clean one-way dependency flow throughout.
-
-Want to continue with `Keywords.ts`?

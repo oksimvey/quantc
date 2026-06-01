@@ -41,7 +41,7 @@ export const DECLARATION_KEYWORDS = new Set<string>([
 // Visibility / scope
 export const SCOPE_KEYWORDS = new Set<string>([
     "global",
-    "local",
+    "instance",
 ]);
 
 // ─────────────────────────────────────────────────────────────
@@ -166,8 +166,7 @@ export const TYPES = new Set<string>([
 ]);
 // ─────────────────────────────────────────────────────────────
 // Custom operator registry (unicode-friendly)
-export const CUSTOM_OPERATORS = new Set<string>();
-
+export const CUSTOM_OPERATORS = new Map<string, Map<string, OperatorDefinition>>
 // ─────────────────────────────────────────────────────────────
 // Classification logic (lexer-only responsibility)
 //
@@ -176,21 +175,34 @@ export const CUSTOM_OPERATORS = new Set<string>();
 // It only categorizes raw identifiers.
 
 export function classifyIdentifier(word: string): TokenType {
-    if (KEYWORDS.has(word)) return TokenType.Keyword;
-    if (TYPES.has(word)) return TokenType.Type;
+    // 1. Built-in functions (highest priority for identifiers)
     if (BUILTINS.has(word)) return TokenType.Builtin;
 
+    // 2. Types
+    if (TYPES.has(word)) return TokenType.Type;
+
+    // 3. Language keywords (control flow, declarations, etc.)
+    if (KEYWORDS.has(word)) return TokenType.Keyword;
+
+    // 4. Custom operators (symbolic identifiers like √, ∑, etc)
+    if (isCustomOperator(word)) return TokenType.CustomOperator;
+
+    // 5. Default user identifier
     return TokenType.Identifier;
 }
 
 // ─────────────────────────────────────────────────────────────
 // Custom operator registration (for extensibility features like √)
 
-export function registerCustomOperator(op: string): void {
-    CUSTOM_OPERATORS.add(op);
+export function registerCustomOperator(op: OperatorDefinition): void {
+    
 }
 
 // Optional helper for lexer:
+export function getCustomOperator(op: string): OperatorDefinition | undefined {
+    return undefined;
+}
+
 export function isCustomOperator(op: string): boolean {
     return CUSTOM_OPERATORS.has(op);
 }
