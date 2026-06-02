@@ -24,7 +24,6 @@ function scanStatements(text: string): boolean {
     while (i < text.length) {
         const ch = text[i];
 
-        // 🔥 bloco
         if (ch === "{") {
             braceBalance++;
         }
@@ -32,13 +31,11 @@ function scanStatements(text: string): boolean {
         else if (ch === "}") {
             braceBalance--;
 
-            // ❌ erro: fecha sem abrir
             if (braceBalance < 0) {
                 return true; // sinaliza erro
             }
         }
 
-        // 🔥 fim de statement
         if (ch === ";") {
             const raw = text.slice(start, i).trim();
 
@@ -55,7 +52,6 @@ function scanStatements(text: string): boolean {
             continue;
         }
 
-        // 🔥 newline como separador
         if (ch === "\n") {
             const raw = text.slice(start, i).trim();
 
@@ -75,7 +71,6 @@ function scanStatements(text: string): boolean {
         i++;
     }
 
-    // ❌ falta fechar {
     if (braceBalance > 0) {
         return true;
     }
@@ -114,7 +109,6 @@ export function activate(context: vscode.ExtensionContext) {
         diagnostics.set(document.uri, diags);
     }
 
-    // 🔥 ESSA PARTE QUE FALTAVA
     function update(doc: vscode.TextDocument) {
         if (doc.languageId !== "qc") return;
         reportError(doc);
@@ -125,7 +119,6 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.workspace.onDidChangeTextDocument(e => update(e.document))
     );
 
-    // 🔥 IMPORTANTE: arquivo já aberto
     if (vscode.window.activeTextEditor) {
         update(vscode.window.activeTextEditor.document);
     }
