@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import {OBJECTS, setupRegistry} from "./ast/ObjectRegistry"
 
 interface Statement {
     text: string;
@@ -83,6 +84,8 @@ function scanStatements(text: string): boolean {
 }
 export function activate(context: vscode.ExtensionContext) {
 
+    setupRegistry();
+
     const diagnostics =
         vscode.languages.createDiagnosticCollection("myLang");
 
@@ -127,22 +130,32 @@ export function activate(context: vscode.ExtensionContext) {
         update(vscode.window.activeTextEditor.document);
     }
 
-    // autocomplete
-    const completion = vscode.languages.registerCompletionItemProvider(
+  
+
+      // autocomplete
+      const completion2 = vscode.languages.registerCompletionItemProvider(
         "qc",
         {
+           
             provideCompletionItems() {
 
-                const intItem = new vscode.CompletionItem(
-                    "int",
-                    vscode.CompletionItemKind.Variable
-                );
+                const arr : vscode.CompletionItem[] = [];
 
-                intItem.insertText = "int";
-                intItem.detail = "32-bit integer";
-                intItem.documentation = new vscode.MarkdownString(`### int`);
+                for (const [key, value] of OBJECTS) {
+                    console.log(key, value);
 
-                return [intItem];
+ 
+
+                    const item = new vscode.CompletionItem(
+                        key, vscode.CompletionItemKind.Variable
+                    );
+                    item.insertText = key;
+                    item.detail = value.comment;
+                    item.documentation = new vscode.MarkdownString('### ' + key)
+                    arr.push(item);
+                }
+
+                return arr;
             }
         }
     );
@@ -156,10 +169,15 @@ export function activate(context: vscode.ExtensionContext) {
                 const range = document.getWordRangeAtPosition(position);
                 const word = document.getText(range);
 
-                if (word === "int") {
-                    return new vscode.Hover(
-                        new vscode.MarkdownString(`### int`)
-                    );
+                for (const [key, value] of OBJECTS){
+                    if (word == key){
+                        const md = new vscode.MarkdownString();
+
+                        md.appendMarkdown('### ' + key + "\n\n");
+                        md.appendMarkdown(value.comment + "\n\n");
+
+                        return new vscode.Hover(md);
+                    }
                 }
 
                 return null;
@@ -167,5 +185,5 @@ export function activate(context: vscode.ExtensionContext) {
         }
     );
 
-    context.subscriptions.push(completion, hover);
+    context.subscriptions.push(completion2, hover);
 }
