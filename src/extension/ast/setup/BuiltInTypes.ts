@@ -1,4 +1,4 @@
-import { Variable } from "../structures/Variable";
+
 import { VariableType } from "./VariableType";
 
 
@@ -64,29 +64,49 @@ export const AutoType : VariableType = {
     comment: "Type is inferred automatically from the initializer expression"
 }
 
+export const TaskType : VariableType = {
+    identifier: "task",
+    comment: "Represents an asynchronous operation that can be awaited"
+}
+
 export const ArrayType : VariableType = {
-    identifier: "Array<T>",
+    identifier: "Array",
     comment : "Fixed-size contiguous collection of elements of type T"
 }
 
 export const ListType : VariableType = {
-    identifier: "List<T>",
+    identifier: "List",
     comment : "Resizable dynamic array with automatic memory growth"
 }
 
 export const HashMapType : VariableType = {
-    identifier: "HashMap<A, B>",
+    identifier: "HashMap",
     comment : "Key-value associative container mapping A → B with average O(1) lookup"
 }
 
-export const Pointer : VariableType = {
-    identifier: "Pointer<T>",
+export const PointerType : VariableType = {
+    identifier: "Pointer",
     comment: "Raw memory address reference (non-owning, unsafe by default)"
 }
 
+export const UniquePointerType : VariableType = {
+    identifier: "UniquePointer",
+    comment: "Exclusive ownership smart pointer with automatic memory management"
+}
 
-export function setup(){
+export const SharedPointerType : VariableType = {
+    identifier: "SharedPointer",
+    comment: "Reference-counted smart pointer allowing shared ownership"
+}
 
+export const ReferenceType : VariableType = {
+    identifier: "Reference",
+    comment: "Alias for another variable, providing an alternative name without additional memory allocation"
+}
+
+export function setupTypes(){
+BuiltInTypes.set(TaskType.identifier, TaskType);
+BuiltInTypes.set(ReferenceType.identifier, ReferenceType);
     BuiltInTypes.set(ByteType.identifier, ByteType);
     BuiltInTypes.set(ShortType.identifier, ShortType);
     BuiltInTypes.set(IntType.identifier, IntType);
@@ -104,10 +124,9 @@ export function setup(){
     BuiltInTypes.set(ArrayType.identifier, ArrayType);
     BuiltInTypes.set(ListType.identifier, ListType);
     BuiltInTypes.set(HashMapType.identifier, HashMapType);
-    BuiltInTypes.set(Pointer.identifier, Pointer);
-
-
-
+    BuiltInTypes.set(PointerType.identifier, PointerType);
+    BuiltInTypes.set(UniquePointerType.identifier, UniquePointerType);
+    BuiltInTypes.set(SharedPointerType.identifier, SharedPointerType);
 }
 
 

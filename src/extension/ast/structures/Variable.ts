@@ -1,4 +1,4 @@
-import { ObjectType } from "../ObjectType";
+
 import { MutabilityModifier } from "../modifiers/MutabilityModifier";
 import { ScopeModifier } from "../modifiers/ScopeModifier";
 import { VisibilityModifier } from "../modifiers/VisibilityModifier";
@@ -26,7 +26,7 @@ export function variableBuilder(
 ): Variable {
   return {
     visibility: visibility_ || VisibilityModifier.Private,
-    scope: scope_ || ScopeModifier.Local,
+    scope: scope_ || ScopeModifier.Member,
     mutability: mutability_ || MutabilityModifier.Mutable,
     type: type_ || AutoType,
     identifier: identifier_,

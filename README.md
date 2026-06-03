@@ -152,7 +152,6 @@ QuantC's keyword set is designed to feel immediately familiar to Java and C++ de
 | `override` | Explicitly marks a method as overriding a parent implementation |
 | `instanceof` | Runtime type check (`obj instanceof MyClass`) |
 | `new` | Heap-allocates a new instance |
-| `delete` | Frees a heap-allocated object |
 | `this` | Reference to the current instance |
 | `public` / `private` | Access modifiers for class members |
 | `const` | Immutable binding (value cannot be reassigned) |
@@ -174,7 +173,6 @@ QuantC's keyword set is designed to feel immediately familiar to Java and C++ de
 | `reference` | Declares an l-value reference |
 | `address` | Takes the address of a variable (like C's `&`) |
 | `pointing` | Dereferences a pointer (like C's `*`) |
-| `unsigned` | Unsigned integer modifier |
 | `enum` | Declares an enumeration |
 
 ### Types

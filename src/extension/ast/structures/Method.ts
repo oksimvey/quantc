@@ -1,4 +1,4 @@
-import { ObjectType } from "./ObjectType"
+
 
 export interface Method {
 
@@ -6,6 +6,5 @@ export interface Method {
 
     comment : string
 
-    returntype : ObjectType
 
 }

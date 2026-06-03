@@ -1,32 +1,30 @@
 {
+  "name": "QC",
   "scopeName": "source.qc",
+  "fileTypes": [
+    "qc"
+  ],
+
   "patterns": [
     { "include": "#comments" },
     { "include": "#strings" },
-    {"include": "#angle-brackets"},
-
-    { "include": "#control-flow" },
-    { "include": "#declarations" },
-    { "include": "#modifiers" },
-    { "include": "#async" },
-    { "include": "#operators-words" },
-    { "include": "#literals" },
-
-    { "include": "#types-primitive" },
-    { "include": "#types-collections" },
-
-    { "include": "#builtins-io" },
-    { "include": "#builtins-math" },
-    { "include": "#builtins-memory" },
-
     { "include": "#numbers" },
-    { "include": "#class-names" },
-    { "include": "#function-calls" },
+
+    { "include": "#keywords" },
+    { "include": "#types" },
+
+    { "include": "#functionDefinitions" },
+    { "include": "#functions" },
+    { "include": "#structures" },
+    { "include": "#generics" },
+
     { "include": "#operators" },
-    { "include": "#identifiers" }
+    { "include": "#punctuation" }
   ],
 
   "repository": {
+    
+
     "comments": {
       "patterns": [
         {
@@ -50,116 +48,20 @@
           "patterns": [
             {
               "name": "constant.character.escape.qc",
-              "match": "\\\\."
+              "match": "\\\\(?:[btnfr\\\"'\\\\]|x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4})"
             }
           ]
-        }
-      ]
-    },
-
-    "control-flow": {
-      "patterns": [
-        {
-          "name": "keyword.control.flow.qc",
-          "match": "\\b(if|else|while|for|switch|case|default|break|continue|return|try|catch|throw|super)\\b"
-        }
-      ]
-    },
-
-    "declarations": {
-      "patterns": [
-        {
-          "name": "keyword.declaration.qc",
-          "match": "\\b(class|enum|extends|new|delete|override|abstract|function|operator)\\b"
-        }
-      ]
-    },
-
-    "modifiers": {
-      "patterns": [
-        {
-          "name": "storage.modifier.scope.qc",
-          "match": "\\b(global|member)\\b"
         },
         {
-          "name": "storage.modifier.access.qc",
-          "match": "\\b(public|private|protected)\\b"
-        },
-        {
-          "name": "storage.modifier.memory.qc",
-          "match": "\\b(const|mutable|instanceof|this)\\b"
-        }
-      ]
-    },
-
-    "async": {
-      "patterns": [
-        {
-          "name": "keyword.control.async.qc",
-          "match": "\\b(wait|await)\\b"
-        }
-      ]
-    },
-
-    "operators-words": {
-      "patterns": [
-        {
-          "name": "keyword.operator.word.qc",
-          "match": "\\b(and|or|not)\\b"
-        }
-      ]
-    },
-
-    "literals": {
-      "patterns": [
-        {
-          "name": "constant.language.qc",
-          "match": "\\b(true|false|null)\\b"
-        }
-      ]
-    },
-
-    "types-primitive": {
-      "patterns": [
-        {
-          "name": "keyword.declaration.q",
-          "match": "\\b(int|float|double|char|string|boolean|void|byte|short|long|uint|ubyte|ulong|ushort)\\b"
-        }
-      ]
-    },
-
-    "types-collections": {
-      "patterns": [
-        {
-          "name": "entity.name.type.container.qc",
-          "match": "\\b(HashMap|List|Array|Pointer|Reference|SharedPointer|UniquePointer)\\b"
-        }
-      ]
-    },
-
-    "builtins-io": {
-      "patterns": [
-        {
-          "name": "support.function.builtin.io.qc",
-          "match": "\\b(print)\\b"
-        }
-      ]
-    },
-
-    "builtins-math": {
-      "patterns": [
-        {
-          "name": "support.function.builtin.math.qc",
-          "match": "\\b(sqrt|abs|sin|cos|tan|min|max|pow|log|exp|floor|ceil)\\b"
-        }
-      ]
-    },
-
-    "builtins-memory": {
-      "patterns": [
-        {
-          "name": "support.function.builtin.memory.qc",
-          "match": "\\b(pointing|getAddress|getUniqueAddress|getSharedAddress)\\b"
+          "name": "string.quoted.single.qc",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.qc",
+              "match": "\\\\(?:[btnfr\\\"'\\\\]|x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4})"
+            }
+          ]
         }
       ]
     },
@@ -167,34 +69,143 @@
     "numbers": {
       "patterns": [
         {
-          "name": "constant.numeric.qc",
-          "match": "\\b\\d+(\\.\\d+)?\\b"
+          "name": "constant.numeric.hex.qc",
+          "match": "\\b0[xX][0-9A-Fa-f]+\\b"
+        },
+        {
+          "name": "constant.numeric.binary.qc",
+          "match": "\\b0[bB][01]+\\b"
+        },
+        {
+          "name": "constant.numeric.float.qc",
+          "match": "\\b(?:\\d+\\.\\d*|\\.\\d+)(?:[eE][+-]?\\d+)?\\b"
+        },
+        {
+          "name": "constant.numeric.integer.qc",
+          "match": "\\b\\d+\\b"
         }
       ]
     },
 
-    "class-names": {
+    "keywords": {
       "patterns": [
         {
-          "name": "entity.name.type.class.qc",
-          "match": "\\b[A-Z][A-Za-z0-9_]*\\b"
+          "name": "keyword.control.qc",
+          "match": "\\b(?:if|else|for|while|continue|break|return|switch|case|default|try|catch|throw|await|wait|and|or|not|this|instanceof)\\b"
+        },
+        {
+          "name": "storage.modifier.qc",
+          "match": "\\b(?:public|protected|private|static|member|const|mutable|override|extends|super)\\b"
+        },
+        {
+          "name": "storage.type.qc",
+          "match": "\\b(?:function|operator|enum|class|void|auto|task)\\b"
+        },
+        {
+          "name": "constant.language.qc",
+          "match": "\\b(?:true|false|null)\\b"
         }
       ]
     },
 
-    "function-calls": {
+    "types": {
       "patterns": [
         {
-          "name": "entity.name.function.qc",
-          "match": "\\b[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\()"
+          "name": "support.type.primitive.qc",
+          "match": "\\b(?:byte|short|int|long|ubyte|ushort|uint|ulong|char|string|boolean)\\b"
+        },
+        {
+          "name": "support.type.container.qc",
+          "match": "\\b(?:Array|List|HashMap|Pointer|UniquePointer|SharedPointer|Reference)\\b"
         }
       ]
     },
-    "angle-brackets": {
+
+    "functionDefinitions": {
       "patterns": [
         {
-          "name": "entity.name.type.container.qc",
-          "match": "[<>]"
+          "name": "meta.function.definition.qc",
+          "begin": "\\b(function)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*(?=\\()",
+          "beginCaptures": {
+            "1": { "name": "storage.type.function.qc" },
+            "2": { "name": "entity.name.function.qc" }
+          },
+          "end": "(?=\\{)",
+          "patterns": [
+            { "include": "#comments" },
+            { "include": "#strings" },
+            { "include": "#numbers" },
+            { "include": "#keywords" },
+            { "include": "#types" },
+            { "include": "#operators" },
+            { "include": "#punctuation" },
+            { "include": "#generics" },
+            { "include": "#functions" }
+          ]
+        }
+      ]
+    },
+
+    "functions": {
+      "patterns": [
+        {
+          "name": "entity.name.function.call.qc",
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b(?=\\s*\\()"
+        }
+      ]
+    },
+"structures": {
+  "patterns": [
+    {
+      "name": "meta.class.qc",
+      "begin": "\\b(class)\\s+([A-Za-z_][A-Za-z0-9_]*)(?:\\s+(extends)\\s+([A-Za-z_][A-Za-z0-9_]*))?\\s*\\{",
+      "beginCaptures": {
+        "1": { "name": "storage.type.class.qc" },
+        "2": { "name": "entity.name.type.class.qc" },
+        "3": { "name": "keyword.inheritance.qc" },
+        "4": { "name": "entity.other.inherited-class.qc" }
+      },
+      "end": "\\}",
+      "patterns": [
+        { "include": "#comments" },
+        { "include": "#strings" },
+        { "include": "#numbers" },
+        { "include": "#keywords" },
+        { "include": "#types" },
+        { "include": "#operators" },
+        { "include": "#punctuation" },
+
+        { "include": "#classMembers" },
+        { "include": "#functions" },
+        { "include": "#generics" }
+      ]
+    }
+  ]
+},
+
+    "generics": {
+      "patterns": [
+        {
+          "name": "meta.generic.qc",
+          "begin": "(?<=\\b[A-Za-z_][A-Za-z0-9_]*\\s*)<",
+          "end": ">",
+          "patterns": [
+            {
+              "name": "support.type.generic.qc",
+              "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+            },
+            {
+              "name": "punctuation.separator.generic.qc",
+              "match": ","
+            },
+            {
+              "name": "keyword.operator.generic.qc",
+              "match": "\\?|&"
+            },
+            { "include": "#comments" },
+            { "include": "#strings" },
+            { "include": "#numbers" }
+          ]
         }
       ]
     },
@@ -202,19 +213,40 @@
     "operators": {
       "patterns": [
         {
-          "name": "keyword.operator.qc",
-          "match": "(==|!=|<=|>=|\\+\\+|--|&&|\\|\\||<<|>>|->|[+\\-*/%=!&|.,;:{}\\[\\]()])"
+          "name": "keyword.operator.assignment.qc",
+          "match": "\\*\\*=|==|!=|<=|>=|\\+=|-=|\\*=|/=|%=|=|\\+\\+|--"
+        },
+        {
+          "name": "keyword.operator.logical.qc",
+          "match": "&&|\\|\\||!"
+        },
+        {
+          "name": "keyword.operator.bitwise.qc",
+          "match": "<<|\\^|&|\\|"
+        },
+        {
+          "name": "keyword.operator.arithmetic.qc",
+          "match": "\\*\\*|[+\\-*/%<>]"
         }
       ]
     },
 
-    "identifiers": {
+    "punctuation": {
       "patterns": [
         {
-          "name": "variable.other.qc",
-          "match": "\\b[a-z_][A-Za-z0-9_]*\\b"
+          "name": "punctuation.separator.qc",
+          "match": "[(),.;:]"
+        },
+        {
+          "name": "punctuation.section.brackets.qc",
+          "match": "[\\[\\]{}]"
+        },
+        {
+          "name": "punctuation.accessor.qc",
+          "match": "\\."
         }
       ]
     }
+
   }
 }
