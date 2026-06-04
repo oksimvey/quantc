@@ -5,6 +5,7 @@
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/src/quantc/*.cpp")
 set(OLD_GLOB
   "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/src/quantc/Init.cpp"
+  "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/src/quantc/Output.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

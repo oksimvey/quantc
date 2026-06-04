@@ -4,5 +4,11 @@
   "command": "C:\\msys64\\mingw64\\bin\\clang++.exe -I\"C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/src/quantc\" -g -std=gnu++23 -O3 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wcast-qual -Wdiscarded-qualifiers -Wignored-qualifiers -Wwrite-strings -Wnon-virtual-dtor -Woverloaded-virtual -Wold-style-cast -Wswitch-enum -Wswitch-default -Wunused-parameter -o CMakeFiles\\QuantC.dir\\src\\quantc\\Init.cpp.obj -c \"C:\\Users\\hapoe\\OneDrive\\Documentos\\My Projects\\QuantC\\src\\quantc\\Init.cpp\"",
   "file": "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/src/quantc/Init.cpp",
   "output": "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/QuantC.dir/src/quantc/Init.cpp.obj"
+},
+{
+  "directory": "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build",
+  "command": "C:\\msys64\\mingw64\\bin\\clang++.exe -I\"C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/src/quantc\" -g -std=gnu++23 -O3 -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversion -Wcast-qual -Wdiscarded-qualifiers -Wignored-qualifiers -Wwrite-strings -Wnon-virtual-dtor -Woverloaded-virtual -Wold-style-cast -Wswitch-enum -Wswitch-default -Wunused-parameter -o CMakeFiles\\QuantC.dir\\src\\quantc\\Output.cpp.obj -c \"C:\\Users\\hapoe\\OneDrive\\Documentos\\My Projects\\QuantC\\src\\quantc\\Output.cpp\"",
+  "file": "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/src/quantc/Output.cpp",
+  "output": "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/QuantC.dir/src/quantc/Output.cpp.obj"
 }
 ]
