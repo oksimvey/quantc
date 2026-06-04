@@ -44,12 +44,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/ninja-build.com"
       - "C:/msys64/mingw64/bin/ninja-build.exe"
@@ -75,12 +74,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -125,12 +123,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "message-v1"
     backtrace:
@@ -151,7 +148,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
       
       The CXX compiler identification is Clang, found in:
-        C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/4.2.3/CompilerIdCXX/a.exe
+        C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/4.2.3/CompilerIdCXX/a.exe
       
   -
     kind: "find-v1"
@@ -189,12 +186,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/llvm-ar.com"
       - "C:/msys64/mingw64/bin/llvm-ar.exe"
@@ -241,9 +237,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar"
@@ -253,12 +246,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar"
       - "C:/msys64/mingw64/bin/ar.com"
     found: "C:/msys64/mingw64/bin/ar.exe"
     search_context:
@@ -280,12 +273,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -322,12 +314,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/llvm-ranlib.com"
       - "C:/msys64/mingw64/bin/llvm-ranlib.exe"
@@ -374,9 +365,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib"
@@ -386,12 +374,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib"
       - "C:/msys64/mingw64/bin/ranlib.com"
     found: "C:/msys64/mingw64/bin/ranlib.exe"
     search_context:
@@ -413,12 +401,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -455,12 +442,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/llvm-strip.com"
       - "C:/msys64/mingw64/bin/llvm-strip.exe"
@@ -507,9 +493,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-strip.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-strip.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-strip"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-strip.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-strip.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-strip"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-strip.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-strip.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-strip"
@@ -519,12 +502,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-strip.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-strip.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-strip"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-strip.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-strip.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-strip"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-strip.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-strip.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-strip"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-strip.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-strip.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-strip"
       - "C:/msys64/mingw64/bin/strip.com"
     found: "C:/msys64/mingw64/bin/strip.exe"
     search_context:
@@ -546,12 +529,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -588,12 +570,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/ld.lld.com"
       - "C:/msys64/mingw64/bin/ld.lld.exe"
@@ -640,9 +621,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/ld.lld.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/ld.lld.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/ld.lld"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/ld.lld.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/ld.lld.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/ld.lld"
       - "C:/Users/hapoe/AppData/Local/python/bin/ld.lld.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/ld.lld.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/ld.lld"
@@ -652,12 +630,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/ld.lld.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/ld.lld.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/ld.lld"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/ld.lld.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/ld.lld.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/ld.lld"
       - "C:/Users/hapoe/AppData/Roaming/npm/ld.lld.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/ld.lld.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/ld.lld"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/ld.lld.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/ld.lld.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/ld.lld"
       - "C:/msys64/mingw64/bin/ld.com"
     found: "C:/msys64/mingw64/bin/ld.exe"
     search_context:
@@ -679,12 +657,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -721,12 +698,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/llvm-nm.com"
       - "C:/msys64/mingw64/bin/llvm-nm.exe"
@@ -773,9 +749,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-nm.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-nm.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-nm"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-nm.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-nm.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-nm"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-nm.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-nm.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-nm"
@@ -785,12 +758,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-nm.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-nm.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-nm"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-nm.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-nm.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-nm"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-nm.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-nm.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-nm"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-nm.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-nm.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-nm"
       - "C:/msys64/mingw64/bin/nm.com"
     found: "C:/msys64/mingw64/bin/nm.exe"
     search_context:
@@ -812,12 +785,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -854,12 +826,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/llvm-objdump.com"
       - "C:/msys64/mingw64/bin/llvm-objdump.exe"
@@ -906,9 +877,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-objdump.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-objdump.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-objdump"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-objdump.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-objdump.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-objdump"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-objdump.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-objdump.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-objdump"
@@ -918,12 +886,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-objdump.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-objdump.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-objdump"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-objdump.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-objdump.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-objdump"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-objdump.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-objdump.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-objdump"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-objdump.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-objdump.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-objdump"
       - "C:/msys64/mingw64/bin/objdump.com"
     found: "C:/msys64/mingw64/bin/objdump.exe"
     search_context:
@@ -945,12 +913,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -987,12 +954,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/llvm-objcopy.com"
       - "C:/msys64/mingw64/bin/llvm-objcopy.exe"
@@ -1039,9 +1005,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-objcopy.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-objcopy.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-objcopy"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-objcopy.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-objcopy.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-objcopy"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-objcopy.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-objcopy.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-objcopy"
@@ -1051,12 +1014,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-objcopy.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-objcopy.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-objcopy"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-objcopy.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-objcopy.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-objcopy"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-objcopy.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-objcopy.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-objcopy"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-objcopy.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-objcopy.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-objcopy"
       - "C:/msys64/mingw64/bin/objcopy.com"
     found: "C:/msys64/mingw64/bin/objcopy.exe"
     search_context:
@@ -1078,12 +1041,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1120,12 +1082,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/llvm-readelf.com"
       - "C:/msys64/mingw64/bin/llvm-readelf.exe"
@@ -1172,9 +1133,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-readelf.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-readelf.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-readelf"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-readelf.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-readelf.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-readelf"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-readelf.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-readelf.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-readelf"
@@ -1184,12 +1142,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-readelf.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-readelf.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-readelf"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-readelf.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-readelf.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-readelf"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-readelf.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-readelf.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-readelf"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-readelf.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-readelf.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-readelf"
       - "C:/msys64/mingw64/bin/readelf.com"
     found: "C:/msys64/mingw64/bin/readelf.exe"
     search_context:
@@ -1211,12 +1169,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1253,12 +1210,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/llvm-dlltool.com"
       - "C:/msys64/mingw64/bin/llvm-dlltool.exe"
@@ -1305,9 +1261,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-dlltool.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-dlltool.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-dlltool"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-dlltool.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-dlltool.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-dlltool"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-dlltool.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-dlltool.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-dlltool"
@@ -1317,12 +1270,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-dlltool.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-dlltool.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-dlltool"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-dlltool.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-dlltool.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-dlltool"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-dlltool.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-dlltool.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-dlltool"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-dlltool.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-dlltool.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-dlltool"
       - "C:/msys64/mingw64/bin/dlltool.com"
     found: "C:/msys64/mingw64/bin/dlltool.exe"
     search_context:
@@ -1344,12 +1297,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1386,12 +1338,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/llvm-addr2line.com"
       - "C:/msys64/mingw64/bin/llvm-addr2line.exe"
@@ -1438,9 +1389,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-addr2line.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-addr2line.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-addr2line"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-addr2line.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-addr2line.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-addr2line"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-addr2line.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-addr2line.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-addr2line"
@@ -1450,12 +1398,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-addr2line.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-addr2line.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-addr2line"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-addr2line.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-addr2line.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-addr2line"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-addr2line.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-addr2line.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-addr2line"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-addr2line.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-addr2line.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-addr2line"
       - "C:/msys64/mingw64/bin/addr2line.com"
     found: "C:/msys64/mingw64/bin/addr2line.exe"
     search_context:
@@ -1477,12 +1425,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1518,12 +1465,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/tapi.com"
       - "C:/msys64/mingw64/bin/tapi.exe"
@@ -1570,9 +1516,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/tapi.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/tapi.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/tapi"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/tapi.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/tapi.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/tapi"
       - "C:/Users/hapoe/AppData/Local/python/bin/tapi.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/tapi.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/tapi"
@@ -1582,12 +1525,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/tapi.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/tapi.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/tapi"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/tapi.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/tapi.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/tapi"
       - "C:/Users/hapoe/AppData/Roaming/npm/tapi.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/tapi.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/tapi"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/tapi.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/tapi.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/tapi"
     found: false
     search_context:
       ENV{PATH}:
@@ -1608,12 +1551,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1652,12 +1594,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/llvm-ar-21.1.com"
       - "C:/msys64/mingw64/bin/llvm-ar-21.1.exe"
@@ -1704,9 +1645,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.1.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.1.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.1"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.1.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.1.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.1"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar-21.1.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar-21.1.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar-21.1"
@@ -1716,12 +1654,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar-21.1.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar-21.1.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar-21.1"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.1.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.1.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.1"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar-21.1.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar-21.1.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar-21.1"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar-21.1.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar-21.1.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar-21.1"
       - "C:/msys64/mingw64/bin/llvm-ar-21.com"
       - "C:/msys64/mingw64/bin/llvm-ar-21.exe"
       - "C:/msys64/mingw64/bin/llvm-ar-21"
@@ -1767,9 +1705,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar-21.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar-21"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar-21.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar-21.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar-21"
@@ -1779,12 +1714,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar-21.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar-21.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar-21"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar-21"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar-21.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar-21.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar-21"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar-21.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar-21.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar-21"
       - "C:/msys64/mingw64/bin/llvm-ar21.com"
       - "C:/msys64/mingw64/bin/llvm-ar21.exe"
       - "C:/msys64/mingw64/bin/llvm-ar21"
@@ -1830,9 +1765,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar21.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar21.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar21"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar21.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar21.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar21"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar21.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar21.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar21"
@@ -1842,12 +1774,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar21.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar21.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar21"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar21.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar21.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar21"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar21.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar21.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar21"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar21.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar21.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar21"
       - "C:/msys64/mingw64/bin/llvm-ar.com"
       - "C:/msys64/mingw64/bin/llvm-ar.exe"
       - "C:/msys64/mingw64/bin/llvm-ar"
@@ -1893,9 +1825,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ar"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ar"
@@ -1905,12 +1834,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ar"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ar"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ar"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ar"
     found: false
     search_context:
       ENV{PATH}:
@@ -1931,12 +1860,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -1975,12 +1903,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/llvm-ranlib-21.1.com"
       - "C:/msys64/mingw64/bin/llvm-ranlib-21.1.exe"
@@ -2027,9 +1954,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.1.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.1.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.1"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.1.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.1.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.1"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib-21.1.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib-21.1.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib-21.1"
@@ -2039,12 +1963,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib-21.1.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib-21.1.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib-21.1"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.1.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.1.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.1"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib-21.1.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib-21.1.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib-21.1"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib-21.1.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib-21.1.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib-21.1"
       - "C:/msys64/mingw64/bin/llvm-ranlib-21.com"
       - "C:/msys64/mingw64/bin/llvm-ranlib-21.exe"
       - "C:/msys64/mingw64/bin/llvm-ranlib-21"
@@ -2090,9 +2014,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib-21"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib-21.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib-21.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib-21"
@@ -2102,12 +2023,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib-21.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib-21.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib-21"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib-21"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib-21.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib-21.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib-21"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib-21.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib-21.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib-21"
       - "C:/msys64/mingw64/bin/llvm-ranlib21.com"
       - "C:/msys64/mingw64/bin/llvm-ranlib21.exe"
       - "C:/msys64/mingw64/bin/llvm-ranlib21"
@@ -2153,9 +2074,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib21.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib21.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib21"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib21.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib21.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib21"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib21.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib21.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib21"
@@ -2165,12 +2083,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib21.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib21.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib21"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib21.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib21.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib21"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib21.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib21.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib21"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib21.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib21.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib21"
       - "C:/msys64/mingw64/bin/llvm-ranlib.com"
       - "C:/msys64/mingw64/bin/llvm-ranlib.exe"
       - "C:/msys64/mingw64/bin/llvm-ranlib"
@@ -2216,9 +2134,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/llvm-ranlib"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/llvm-ranlib"
@@ -2228,12 +2143,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/llvm-ranlib"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/llvm-ranlib"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/llvm-ranlib"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/llvm-ranlib"
     found: false
     search_context:
       ENV{PATH}:
@@ -2254,12 +2169,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -2298,12 +2212,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
     searched_directories:
       - "C:/msys64/mingw64/bin/clang-scan-deps-21.1.com"
       - "C:/msys64/mingw64/bin/clang-scan-deps-21.1.exe"
@@ -2350,9 +2263,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.1.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.1.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.1"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.1.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.1.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.1"
       - "C:/Users/hapoe/AppData/Local/python/bin/clang-scan-deps-21.1.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/clang-scan-deps-21.1.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/clang-scan-deps-21.1"
@@ -2362,12 +2272,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/clang-scan-deps-21.1.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/clang-scan-deps-21.1.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/clang-scan-deps-21.1"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.1.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.1.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.1"
       - "C:/Users/hapoe/AppData/Roaming/npm/clang-scan-deps-21.1.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/clang-scan-deps-21.1.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/clang-scan-deps-21.1"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/clang-scan-deps-21.1.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/clang-scan-deps-21.1.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/clang-scan-deps-21.1"
       - "C:/msys64/mingw64/bin/clang-scan-deps-21.com"
       - "C:/msys64/mingw64/bin/clang-scan-deps-21.exe"
       - "C:/msys64/mingw64/bin/clang-scan-deps-21"
@@ -2413,9 +2323,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/clang-scan-deps-21"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21"
       - "C:/Users/hapoe/AppData/Local/python/bin/clang-scan-deps-21.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/clang-scan-deps-21.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/clang-scan-deps-21"
@@ -2425,12 +2332,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/clang-scan-deps-21.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/clang-scan-deps-21.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/clang-scan-deps-21"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps-21"
       - "C:/Users/hapoe/AppData/Roaming/npm/clang-scan-deps-21.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/clang-scan-deps-21.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/clang-scan-deps-21"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/clang-scan-deps-21.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/clang-scan-deps-21.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/clang-scan-deps-21"
       - "C:/msys64/mingw64/bin/clang-scan-deps21.com"
       - "C:/msys64/mingw64/bin/clang-scan-deps21.exe"
       - "C:/msys64/mingw64/bin/clang-scan-deps21"
@@ -2476,9 +2383,6 @@ events:
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/clang-scan-deps21.com"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/clang-scan-deps21.exe"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/clang-scan-deps21"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps21.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps21.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps21"
       - "C:/Users/hapoe/AppData/Local/python/bin/clang-scan-deps21.com"
       - "C:/Users/hapoe/AppData/Local/python/bin/clang-scan-deps21.exe"
       - "C:/Users/hapoe/AppData/Local/python/bin/clang-scan-deps21"
@@ -2488,12 +2392,12 @@ events:
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/clang-scan-deps21.com"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/clang-scan-deps21.exe"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/clang-scan-deps21"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps21.com"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps21.exe"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/clang-scan-deps21"
       - "C:/Users/hapoe/AppData/Roaming/npm/clang-scan-deps21.com"
       - "C:/Users/hapoe/AppData/Roaming/npm/clang-scan-deps21.exe"
       - "C:/Users/hapoe/AppData/Roaming/npm/clang-scan-deps21"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/clang-scan-deps21.com"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/clang-scan-deps21.exe"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/clang-scan-deps21"
       - "C:/msys64/mingw64/bin/clang-scan-deps.com"
     found: "C:/msys64/mingw64/bin/clang-scan-deps.exe"
     search_context:
@@ -2515,12 +2419,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
   -
     kind: "find-v1"
     backtrace:
@@ -2561,12 +2464,11 @@ events:
       - "C:/Users/hapoe/.cargo/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Local/python/bin/"
       - "C:/Users/hapoe/.aftman/bin/"
       - "C:/Users/hapoe/AppData/Local/Programs/Ollama/"
+      - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/hapoe/AppData/Roaming/npm/"
-      - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin/"
       - "C:/msys64/mingw64/bin/"
       - "C:/msys64/mingw64/sbin/"
       - "C:/msys64/mingw64/"
@@ -2601,12 +2503,11 @@ events:
         - "C:/Users/hapoe/.cargo/bin"
         - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Python\\Launcher\\"
         - "C:/Users/hapoe/AppData/Local/Microsoft/WindowsApps"
-        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:/Users/hapoe/AppData/Local/Python/bin"
-        - "C:\\Users\\hapoe\\.aftman\\bin"
-        - "C:/Users/hapoe/AppData/Local/Programs/Ollama"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Python\\bin"
+        - "C:/Users/hapoe/.aftman/bin"
+        - "C:\\Users\\hapoe\\AppData\\Local\\Programs\\Ollama"
+        - "C:/Users/hapoe/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Users\\hapoe\\AppData\\Roaming\\npm"
-        - "C:/Users/hapoe/AppData/Local/Programs/cursor/resources/app/bin"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/QuantC"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/msys64/mingw64"
@@ -2623,8 +2524,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/CMakeScratch/TryCompile-hqhdtb"
-      binary: "C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/CMakeScratch/TryCompile-hqhdtb"
+      source: "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/CMakeScratch/TryCompile-r883mo"
+      binary: "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/CMakeScratch/TryCompile-r883mo"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/msys64/mingw64/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: ""
@@ -2635,16 +2536,16 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/CMakeScratch/TryCompile-hqhdtb'
+        Change Dir: 'C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/CMakeScratch/TryCompile-r883mo'
         
-        Run Build Command(s): C:/msys64/mingw64/bin/ninja.exe -v cmTC_37463
-        [1/2] C:\\msys64\\mingw64\\bin\\clang++.exe   -v -MD -MT CMakeFiles/cmTC_37463.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_37463.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_37463.dir/CMakeCXXCompilerABI.cpp.obj -c C:/msys64/mingw64/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): C:/msys64/mingw64/bin/ninja.exe -v cmTC_48bcf
+        [1/2] C:\\msys64\\mingw64\\bin\\clang++.exe   -v -MD -MT CMakeFiles/cmTC_48bcf.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_48bcf.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_48bcf.dir/CMakeCXXCompilerABI.cpp.obj -c C:/msys64/mingw64/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang version 21.1.8
         Target: x86_64-w64-windows-gnu
         Thread model: posix
         InstalledDir: C:/msys64/mingw64/bin
          (in-process)
-         "C:/msys64/mingw64/bin/clang++.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb "-fdebug-compilation-dir=C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/CMakeScratch/TryCompile-hqhdtb" -v "-fcoverage-compilation-dir=C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/CMakeScratch/TryCompile-hqhdtb" -resource-dir C:/msys64/mingw64/lib/clang/21 -dependency-file "CMakeFiles\\\\cmTC_37463.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_37463.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++ -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/backward -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/15.2.0 -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/15.2.0/backward -internal-isystem C:/msys64/mingw64/include/c++/15.2.0 -internal-isystem C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/include/c++/15.2.0/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++ -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2.0 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2.0/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2.0/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15/backward -internal-isystem C:/msys64/mingw64/lib/clang/21/include -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem C:/msys64/mingw64/include -fdeprecated-macro -ferror-limit 19 -femulated-tls -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -exception-model=seh -faddrsig -o CMakeFiles/cmTC_37463.dir/CMakeCXXCompilerABI.cpp.obj -x c++ C:/msys64/mingw64/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "C:/msys64/mingw64/bin/clang++.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb "-fdebug-compilation-dir=C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/CMakeScratch/TryCompile-r883mo" -v "-fcoverage-compilation-dir=C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/CMakeScratch/TryCompile-r883mo" -resource-dir C:/msys64/mingw64/lib/clang/21 -dependency-file "CMakeFiles\\\\cmTC_48bcf.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_48bcf.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++ -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/backward -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/15.2.0 -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/15.2.0/backward -internal-isystem C:/msys64/mingw64/include/c++/15.2.0 -internal-isystem C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/include/c++/15.2.0/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++ -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2.0 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2.0/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2.0/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15/backward -internal-isystem C:/msys64/mingw64/lib/clang/21/include -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem C:/msys64/mingw64/include -fdeprecated-macro -ferror-limit 19 -femulated-tls -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -exception-model=seh -faddrsig -o CMakeFiles/cmTC_48bcf.dir/CMakeCXXCompilerABI.cpp.obj -x c++ C:/msys64/mingw64/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 21.1.8 based upon LLVM 21.1.8 default target x86_64-w64-windows-gnu
         ignoring nonexistent directory "C:/msys64/mingw64/x86_64-w64-mingw32/include/c++"
         ignoring nonexistent directory "C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32"
@@ -2674,12 +2575,12 @@ events:
          C:/msys64/mingw64/lib/clang/21/include
          C:/msys64/mingw64/include
         End of search list.
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\mingw64\\bin\\clang++.exe  -v -Wl,-v CMakeFiles/cmTC_37463.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_37463.exe -Wl,--out-implib,libcmTC_37463.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\mingw64\\bin\\clang++.exe  -v -Wl,-v CMakeFiles/cmTC_48bcf.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_48bcf.exe -Wl,--out-implib,libcmTC_48bcf.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         clang version 21.1.8
         Target: x86_64-w64-windows-gnu
         Thread model: posix
         InstalledDir: C:/msys64/mingw64/bin
-         "C:/msys64/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_37463.exe C:/msys64/mingw64/lib/crt2.o C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/msys64/mingw64/x86_64-w64-mingw32/lib -LC:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib -LC:/msys64/mingw64/lib -v CMakeFiles/cmTC_37463.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_37463.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+         "C:/msys64/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_48bcf.exe C:/msys64/mingw64/lib/crt2.o C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/msys64/mingw64/x86_64-w64-mingw32/lib -LC:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib -LC:/msys64/mingw64/lib -v CMakeFiles/cmTC_48bcf.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_48bcf.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         GNU ld (GNU Binutils) 2.46
         
       exitCode: 0
@@ -2717,16 +2618,16 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/CMakeScratch/TryCompile-hqhdtb']
+        ignore line: [Change Dir: 'C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/CMakeScratch/TryCompile-r883mo']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/msys64/mingw64/bin/ninja.exe -v cmTC_37463]
-        ignore line: [[1/2] C:\\msys64\\mingw64\\bin\\clang++.exe   -v -MD -MT CMakeFiles/cmTC_37463.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_37463.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_37463.dir/CMakeCXXCompilerABI.cpp.obj -c C:/msys64/mingw64/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): C:/msys64/mingw64/bin/ninja.exe -v cmTC_48bcf]
+        ignore line: [[1/2] C:\\msys64\\mingw64\\bin\\clang++.exe   -v -MD -MT CMakeFiles/cmTC_48bcf.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_48bcf.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_48bcf.dir/CMakeCXXCompilerABI.cpp.obj -c C:/msys64/mingw64/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang version 21.1.8]
         ignore line: [Target: x86_64-w64-windows-gnu]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: C:/msys64/mingw64/bin]
         ignore line: [ (in-process)]
-        ignore line: [ "C:/msys64/mingw64/bin/clang++.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb "-fdebug-compilation-dir=C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/CMakeScratch/TryCompile-hqhdtb" -v "-fcoverage-compilation-dir=C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/CMakeScratch/TryCompile-hqhdtb" -resource-dir C:/msys64/mingw64/lib/clang/21 -dependency-file "CMakeFiles\\\\cmTC_37463.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_37463.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++ -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/backward -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/15.2.0 -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/15.2.0/backward -internal-isystem C:/msys64/mingw64/include/c++/15.2.0 -internal-isystem C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/include/c++/15.2.0/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++ -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2.0 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2.0/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2.0/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15/backward -internal-isystem C:/msys64/mingw64/lib/clang/21/include -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem C:/msys64/mingw64/include -fdeprecated-macro -ferror-limit 19 -femulated-tls -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -exception-model=seh -faddrsig -o CMakeFiles/cmTC_37463.dir/CMakeCXXCompilerABI.cpp.obj -x c++ C:/msys64/mingw64/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "C:/msys64/mingw64/bin/clang++.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb "-fdebug-compilation-dir=C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/CMakeScratch/TryCompile-r883mo" -v "-fcoverage-compilation-dir=C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/CMakeScratch/TryCompile-r883mo" -resource-dir C:/msys64/mingw64/lib/clang/21 -dependency-file "CMakeFiles\\\\cmTC_48bcf.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_48bcf.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++ -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/backward -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/15.2.0 -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/15.2.0/backward -internal-isystem C:/msys64/mingw64/include/c++/15.2.0 -internal-isystem C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/include/c++/15.2.0/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++ -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2.0 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2.0/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2.0/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15.2/backward -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15/x86_64-w64-mingw32 -internal-isystem C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/g++-v15/backward -internal-isystem C:/msys64/mingw64/lib/clang/21/include -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/include -internal-isystem C:/msys64/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem C:/msys64/mingw64/include -fdeprecated-macro -ferror-limit 19 -femulated-tls -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -exception-model=seh -faddrsig -o CMakeFiles/cmTC_48bcf.dir/CMakeCXXCompilerABI.cpp.obj -x c++ C:/msys64/mingw64/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 21.1.8 based upon LLVM 21.1.8 default target x86_64-w64-windows-gnu]
         ignore line: [ignoring nonexistent directory "C:/msys64/mingw64/x86_64-w64-mingw32/include/c++"]
         ignore line: [ignoring nonexistent directory "C:/msys64/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32"]
@@ -2756,18 +2657,18 @@ events:
         ignore line: [ C:/msys64/mingw64/lib/clang/21/include]
         ignore line: [ C:/msys64/mingw64/include]
         ignore line: [End of search list.]
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\mingw64\\bin\\clang++.exe  -v -Wl -v CMakeFiles/cmTC_37463.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_37463.exe -Wl --out-implib libcmTC_37463.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\msys64\\mingw64\\bin\\clang++.exe  -v -Wl -v CMakeFiles/cmTC_48bcf.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_48bcf.exe -Wl --out-implib libcmTC_48bcf.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [clang version 21.1.8]
         ignore line: [Target: x86_64-w64-windows-gnu]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: C:/msys64/mingw64/bin]
-        link line: [ "C:/msys64/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_37463.exe C:/msys64/mingw64/lib/crt2.o C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/msys64/mingw64/x86_64-w64-mingw32/lib -LC:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib -LC:/msys64/mingw64/lib -v CMakeFiles/cmTC_37463.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_37463.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
+        link line: [ "C:/msys64/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_48bcf.exe C:/msys64/mingw64/lib/crt2.o C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/msys64/mingw64/x86_64-w64-mingw32/lib -LC:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib -LC:/msys64/mingw64/lib -v CMakeFiles/cmTC_48bcf.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_48bcf.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
           arg [C:/msys64/mingw64/bin/ld] ==> ignore
           arg [-m] ==> ignore
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_37463.exe] ==> ignore
+          arg [cmTC_48bcf.exe] ==> ignore
           arg [C:/msys64/mingw64/lib/crt2.o] ==> obj [C:/msys64/mingw64/lib/crt2.o]
           arg [C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o] ==> obj [C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o]
           arg [-LC:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0] ==> dir [C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0]
@@ -2775,9 +2676,9 @@ events:
           arg [-LC:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib] ==> dir [C:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib]
           arg [-LC:/msys64/mingw64/lib] ==> dir [C:/msys64/mingw64/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_37463.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_48bcf.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_37463.dll.a] ==> ignore
+          arg [libcmTC_48bcf.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore

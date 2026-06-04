@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build"
+			"value" : "c:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -139,10 +139,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "CXX compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "C:/msys64/mingw64/bin/clang++.exe"
 		},
 		{
@@ -459,7 +459,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -531,7 +531,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension"
+			"value" : "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1203,7 +1203,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build"
+			"value" : "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build"
 		},
 		{
 			"name" : "QuantC_IS_TOP_LEVEL",
@@ -1227,7 +1227,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension"
+			"value" : "C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC"
 		}
 	],
 	"kind" : "cache",

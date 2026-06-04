@@ -1,4 +1,4 @@
 # ninja log v7
-11	44	8021515945895129	C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/cmake.verify_globs	1e879473f0523037
-51	1453	8021334969488502	CMakeFiles/QuantC.dir/src/quantc/Init.cpp.obj	c873a0c6c3bfa6f2
-1453	1716	8021334983508188	QuantC.exe	73d26a6ccd333dc2
+4	45	8023016535744657	C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/cmake.verify_globs	9fa2dbc9d4cd6e51
+46	1648	8023016536168129	CMakeFiles/QuantC.dir/src/quantc/Init.cpp.obj	f28e0d8a5256930f
+1651	2017	8023016552222168	QuantC.exe	73d26a6ccd333dc2

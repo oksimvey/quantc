@@ -1,3 +1,3 @@
-C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/QuantC.dir
-C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/edit_cache.dir
-C:/Users/hapoe/OneDrive/Documentos/My Projects/quantc_extension/build/CMakeFiles/rebuild_cache.dir
+C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/QuantC.dir
+C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/edit_cache.dir
+C:/Users/hapoe/OneDrive/Documentos/My Projects/QuantC/build/CMakeFiles/rebuild_cache.dir
