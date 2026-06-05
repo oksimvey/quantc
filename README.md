@@ -91,7 +91,7 @@ function void main() {
 
 ### Variables & Mutability
 
-```qc
+```cpp
 // Mutable variable (default)
 mutable int score = 0;
 
@@ -114,7 +114,7 @@ private int secret = 42;
 
 ### Control Flow
 
-```qc
+```cpp
 // Conditionals
 if (x > 0) {
     print("positive");
@@ -158,7 +158,7 @@ try {
 
 ### Functions
 
-```qc
+```cpp
 function int add(int a, int b) {
     return a + b;
 }
@@ -178,7 +178,7 @@ function auto compute(float x) {
 
 ### Classes & Inheritance
 
-```qc
+```java
 abstract class Shape {
     public function float area();
     public function float perimeter();
@@ -209,7 +209,7 @@ print(c instanceof Shape); // true
 
 ### Generics
 
-```qc
+```java
 class Stack<T> {
     private List<T> items;
 
@@ -230,7 +230,7 @@ s.push(10);
 
 ### Async & Tasks
 
-```qc
+```luau
 task function string fetchData(string url) {
     const string result = await httpGet(url);
     return result;
@@ -248,7 +248,7 @@ function void main() {
 
 QuantC allows you to define new symbolic operators on your classes â€” inspired by Haskell. Implement a method named `operator<symbol>()` and the symbol becomes usable as an infix/prefix operator.
 
-```qc
+```java
 class Vec2 {
     public float x;
     public float y;
@@ -278,7 +278,7 @@ Any Unicode symbol can be registered as an operator, giving domain-specific lang
 
 ### Pointers & Memory
 
-```qc
+```java
 // Stack-allocated
 int x = 10;
 
@@ -298,7 +298,7 @@ delete p;
 
 ### Enums
 
-```qc
+```java
 enum Direction {
     NORTH,
     SOUTH,
@@ -363,7 +363,7 @@ QuantC is designed for interoperability. Compiled output can be consumed from â€
 ### C / C++
 QuantC transpiles to C++, so interop is native. Expose a `.qc` class as a C++ header, or `#include` external C/C++ headers directly.
 
-```qc
+```luau
 // Call C++ code
 @include "mylib.hpp"
 
