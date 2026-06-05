@@ -1,13 +1,21 @@
 {
     // The name of the project
+    
     "project_name":"QuantC",
+
     // The path to the source
     "source_path":"src/example_path",
+
     /* Level of compiler optimization
        "low"
        "medium"
        "high"
        "extreme"
     */
-    "compiler_optimization":"medium"
+
+    "compiler_optimization":"medium",
+
+    "libraries": [
+        "C:/example/path/lib"
+    ]
 }

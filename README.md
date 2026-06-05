@@ -2,693 +2,434 @@
 
 <img src="icons/quantc-icon.svg" width="150" style="vertical-align: middle;" />
 
-### A modern, expressive compiled language that transpiles to C++
-
-![Status](https://img.shields.io/badge/status-in%20development-orange?style=flat-square)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![VS Code Extension](https://img.shields.io/badge/VS%20Code-Extension-007ACC?logo=visual-studio-code)](https://marketplace.visualstudio.com)
-[![C++ Backend](https://img.shields.io/badge/Backend-C%2B%2B17-00599C?logo=cplusplus)](https://isocpp.org)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]()
-
-> *Expressive like Java. Fast like C++. Extensible like Haskell.*
-
-</div>
-
-```java
-class Vector2D {
-    public float x, y;
-
-    function Vector2D(float x, float y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    // Define a custom operator: ⊕ for vector addition
-    public function operatorAdd(Vector2D other) -> Vector2D {
-        return new Vector2D(this.x + other.x, this.y + other.y);
-    }
-}
-
-function main() -> void {
-    Vector2D a = new Vector2D(1.0, 2.0);
-    Vector2D b = new Vector2D(3.0, 4.0);
-    Vector2D c = a ⊕ b;  // Custom operator in action
-    print(c.x);           // 4.0
-}
-```
+> A modern, expressive systems language that transpiles to C++ — with Java/C++ familiarity, Haskell-inspired operator definitions, and first-class VSCode tooling.
 
 ---
 
 ## Table of Contents
 
 - [Overview](#overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Language Reference](#language-reference)
-  - [Keywords](#keywords)
-  - [Types](#types)
-  - [Built-in Functions](#built-in-functions)
+- [Language Features](#language-features)
+  - [Primitives & Types](#primitives--types)
+  - [Variables & Mutability](#variables--mutability)
+  - [Control Flow](#control-flow)
+  - [Functions](#functions)
+  - [Classes & Inheritance](#classes--inheritance)
+  - [Generics](#generics)
+  - [Async & Tasks](#async--tasks)
   - [Custom Operators](#custom-operators)
-- [VS Code Extension](#vs-code-extension)
-- [C++ Transpiler](#c-transpiler)
-- [Foreign Language Bindings](#foreign-language-bindings)
-  - [C Binding](#c-binding)
-  - [C++ Binding](#c-binding-1)
-  - [Java Binding](#java-binding-jni)
-  - [Python Binding](#python-binding)
-- [Calling C/C++ from QuantC](#calling-cc-from-quantc)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+  - [Pointers & Memory](#pointers--memory)
+  - [Enums](#enums)
+- [Builtins](#builtins)
+- [VSCode Extension](#vscode-extension)
+- [Language Bindings](#language-bindings)
+- [Transpilation](#transpilation)
+- [Roadmap](#roadmap)
 
 ---
 
 ## Overview
 
-**QuantC** is a statically typed, object-oriented language designed for developers who love Java's clarity and C++'s raw performance. Instead of maintaining a separate runtime, QuantC **transpiles directly to idiomatic C++17**, giving you:
+QuantC (`.qc`) is an object-oriented, statically typed language designed to feel familiar to Java and C++ developers while adding modern ergonomics. It transpiles to clean C++, giving you native performance without the boilerplate.
 
-- Zero-overhead abstractions through C++ codegen
-- Familiar OOP constructs — classes, inheritance, interfaces, generics
-- Haskell-style **custom operator definitions** via special method naming conventions
-- First-class **async/await** support
-- Strong **interoperability** with C, C++, Java, and Python via generated bindings
-- A polished **VS Code extension** for a complete IDE experience
+```qc
+class Vector2 {
+    public float x;
+    public float y;
 
----
+    public function Vector2(float x, float y) {
+        this.x = x;
+        this.y = y;
+    }
 
-## Features
+    public function float length() {
+        return sqrt(x ** 2 + y ** 2);
+    }
+}
 
-| Feature | Description |
-|---|---|
-| 🔄 **C++ Transpilation** | Full source-to-source compilation targeting C++17 |
-| 🧩 **Custom Operators** | Define new Unicode operators on any class (e.g. `√`, `⊕`, `∩`) |
-| 🔗 **Multi-language Bindings** | Auto-generated C, C++ headers, JNI (Java), and CPython bindings |
-| 🧠 **Smart VS Code Extension** | IntelliSense, error highlighting, quick fixes, cross-file class resolution |
-| ⚡ **Async/Await** | First-class `await`/`wait` support transpiled to `std::future` / coroutines |
-| 🛡️ **Memory Safety Helpers** | `pointer`, `reference`, `address`, `pointing` keywords make intent explicit |
-| 🏗️ **Full OOP** | Classes, abstract classes, inheritance (`extends`), access modifiers |
-| 🔢 **Rich Type System** | Primitives, `array`, `list`, `hashmap`, `enum`, `constexpr`, unsigned variants |
-
----
-
-## Installation
-
-### Prerequisites
-
-- **Node.js** ≥ 18 (for the VS Code extension)
-- **Clang** ≥ 14 or **GCC** ≥ 12 (C++ backend)
-- **CMake** ≥ 3.20
-- **Python** ≥ 3.10 *(optional, for Python bindings)*
-- **JDK** ≥ 11 *(optional, for Java bindings)*
-
-### Install the CLI
-
-```bash
-# Clone the repository
-git clone https://github.com/your-org/quantc.git
-cd quantc
-
-# Install dependencies and build
-npm install
-npm run build
-
-# Link the CLI globally
-npm link
-
-# Verify installation
-quantc --version
-```
-
-### Install the VS Code Extension
-
-**From the marketplace (recommended):**
-
-1. Open VS Code
-2. Press `Ctrl+P` / `Cmd+P`
-3. Run `ext install your-org.quantc`
-
-**From source:**
-
-```bash
-cd vscode-extension
-npm install
-npx vsce package
-code --install-extension quantc-*.vsix
+function void main() {
+    const Vector2 v = new Vector2(3.0, 4.0);
+    print(v.length()); // 5.0
+}
 ```
 
 ---
 
-## Language Reference
+## Language Features
 
-### Keywords
+### Primitives & Types
 
-QuantC's keyword set is designed to feel immediately familiar to Java and C++ developers, while adding expressive new constructs.
+| Type      | Description                    |
+|-----------|-------------------------------|
+| `byte`    | 8-bit integer                  |
+| `short`   | 16-bit integer                 |
+| `int`     | 32-bit integer                 |
+| `long`    | 64-bit integer                 |
+| `ubyte` / `ushort` / `uint` / `ulong` | Unsigned variants |
+| `float`   | 32-bit floating point          |
+| `double`  | 64-bit floating point          |
+| `char`    | Single character               |
+| `string`  | Text string                    |
+| `boolean` | `true` / `false`               |
+| `void`    | No return value                |
 
-| Keyword | Description |
-|---|---|
-| `class` | Declares an object-oriented class |
-| `abstract` | Marks a class or method as abstract (cannot be directly instantiated) |
-| `extends` | Inherits from a parent class |
-| `override` | Explicitly marks a method as overriding a parent implementation |
-| `instanceof` | Runtime type check (`obj instanceof MyClass`) |
-| `new` | Heap-allocates a new instance |
-| `this` | Reference to the current instance |
-| `public` / `private` | Access modifiers for class members |
-| `const` | Immutable binding (value cannot be reassigned) |
-| `mutable` | Explicitly allows mutation inside `const` contexts |
-| `global` / `member` | Scope qualifiers for variable declarations |
-| `function` | Declares a function or method |
-| `return` | Returns a value from a function |
-| `if` / `else` | Conditional branching |
-| `while` | Loop with pre-condition |
-| `for` | Loop (C-style or range-based) |
-| `switch` / `case` / `default` | Multi-branch selection |
-| `break` / `continue` | Loop control flow |
-| `try` / `catch` / `throw` | Exception handling |
-| `await` / `wait` | Asynchronous suspension points |
-| `null` | Null reference literal |
-| `true` / `false` | Boolean literals |
-| `and` / `or` / `not` | Logical operators (readable alternatives to `&&`, `\|\|`, `!`) |
-| `pointer` | Declares a raw pointer type |
-| `reference` | Declares an l-value reference |
-| `address` | Takes the address of a variable (like C's `&`) |
-| `pointing` | Dereferences a pointer (like C's `*`) |
-| `enum` | Declares an enumeration |
+**Container types:**
 
-### Types
+| Type              | Description                        |
+|-------------------|------------------------------------|
+| `Array<T>`        | Fixed-size typed array             |
+| `List<T>`         | Dynamic list                       |
+| `HashMap<K, V>`   | Key-value map                      |
+| `Pointer<T>`      | Raw pointer                        |
+| `UniquePointer<T>`| Unique ownership pointer           |
+| `SharedPointer<T>`| Reference-counted shared pointer   |
+| `Reference<T>`    | Reference type                     |
 
-| Type | C++ Equivalent | Description |
-|---|---|---|
-| `byte` | `int8_t` | 8-bit signed integer |
-| `short` | `int16_t` | 16-bit signed integer |
-| `int` | `int32_t` | 32-bit signed integer |
-| `long` | `int64_t` | 64-bit signed integer |
-| `float` | `float` | 32-bit floating point |
-| `double` | `double` | 64-bit floating point |
-| `char` | `char` | Single character |
-| `string` | `std::string` | UTF-8 string |
-| `boolean` | `bool` | Boolean value |
-| `void` | `void` | No return value |
-| `array<T>` | `std::array<T, N>` | Fixed-size typed array |
-| `list<T>` | `std::vector<T>` | Dynamic typed list |
-| `hashmap<K, V>` | `std::unordered_map<K,V>` | Hash table / dictionary |
+---
 
-### Built-in Functions
+### Variables & Mutability
 
-All built-ins map directly to their C standard library or `<cmath>` equivalents:
+```qc
+// Mutable variable (default)
+mutable int score = 0;
 
-```quantc
-print(value)          // Console output
-sqrt(x)               // Square root
-abs(x)                // Absolute value
-pow(base, exp)        // Exponentiation
-min(a, b)             // Minimum of two values
-max(a, b)             // Maximum of two values
-floor(x)              // Floor (round down)
-ceil(x)               // Ceiling (round up)
-sin(x)  cos(x)  tan(x)
-asin(x) acos(x) atan(x) atan2(y, x)
-sinh(x) cosh(x) tanh(x)
-asinh(x) acosh(x) atanh(x)
-exp(x)                // e^x
-log(x)                // Natural logarithm
-log10(x)              // Base-10 logarithm
+// Immutable — must be initialized
+const string name = "QuantC";
+
+// Compile-time constant
+constexpr float PI = 3.14159;
+
+// Scope modifiers
+global int instanceCount = 0;
+local float temp = 1.5;
+
+// Visibility
+public int health = 100;
+private int secret = 42;
+```
+
+---
+
+### Control Flow
+
+```qc
+// Conditionals
+if (x > 0) {
+    print("positive");
+} else if (x < 0) {
+    print("negative");
+} else {
+    print("zero");
+}
+
+// Loops
+for (int i = 0; i < 10; i++) {
+    if (i == 5) continue;
+    if (i == 8) break;
+    print(i);
+}
+
+while (running) {
+    update();
+}
+
+// Switch
+switch (state) {
+    case 0: init(); break;
+    case 1: run();  break;
+    default: stop(); break;
+}
+
+// Logical operators — readable aliases available
+if (x > 0 and y > 0) { ... }
+if (not valid or count == 0) { ... }
+
+// Exception handling
+try {
+    riskyOperation();
+} catch (Exception e) {
+    throw new RuntimeError("Failed: " + e.message);
+}
+```
+
+---
+
+### Functions
+
+```qc
+function int add(int a, int b) {
+    return a + b;
+}
+
+// Void function
+function void greet(string name) {
+    print("Hello, " + name);
+}
+
+// Using auto for inferred types
+function auto compute(float x) {
+    return x * 2.0;
+}
+```
+
+---
+
+### Classes & Inheritance
+
+```qc
+abstract class Shape {
+    public function float area();
+    public function float perimeter();
+}
+
+class Circle extends Shape {
+    private float radius;
+
+    public function Circle(float r) {
+        this.radius = r;
+    }
+
+    override public function float area() {
+        return PI * radius ** 2;
+    }
+
+    override public function float perimeter() {
+        return 2.0 * PI * radius;
+    }
+}
+
+// Instantiation
+const Circle c = new Circle(5.0);
+print(c instanceof Shape); // true
+```
+
+---
+
+### Generics
+
+```qc
+class Stack<T> {
+    private List<T> items;
+
+    public function void push(T item) {
+        items.add(item);
+    }
+
+    public function T pop() {
+        return items.removeLast();
+    }
+}
+
+const Stack<int> s = new Stack<int>();
+s.push(10);
+```
+
+---
+
+### Async & Tasks
+
+```qc
+task function string fetchData(string url) {
+    const string result = await httpGet(url);
+    return result;
+}
+
+function void main() {
+    const string data = wait fetchData("https://example.com");
+    print(data);
+}
 ```
 
 ---
 
 ### Custom Operators
 
-One of QuantC's most distinctive features: you can **define new operators** on any class using a special naming convention, similar to Haskell's operator overloading but with Unicode symbols.
+QuantC allows you to define new symbolic operators on your classes — inspired by Haskell. Implement a method named `operator<symbol>()` and the symbol becomes usable as an infix/prefix operator.
 
-#### How It Works
+```qc
+class Vec2 {
+    public float x;
+    public float y;
 
-Name a method `operator<Name>()` and QuantC maps it to a Unicode glyph you can use in expressions:
-
-| Method Name | Unicode Symbol | Example Usage |
-|---|---|---|
-| `operatorSqrt` | `√` | `√matrix` |
-| `operatorAdd` | `⊕` | `a ⊕ b` |
-| `operatorIntersect` | `∩` | `setA ∩ setB` |
-| `operatorUnion` | `∪` | `setA ∪ setB` |
-| `operatorTensor` | `⊗` | `A ⊗ B` |
-| `operatorNorm` | `‖` | `‖vector‖` |
-
-#### Example — Matrix Square Root
-
-```quantc
-class Matrix {
-    private array<array<double>> data;
-
-    // Unary prefix operator: √matrix
-    public function operatorSqrt() -> Matrix {
-        return this.computeMatrixSqrt();
+    // Define √ as prefix: √v returns magnitude
+    public function float operatorsqrt() {
+        return sqrt(x ** 2 + y ** 2);
     }
 
-    // Binary infix operator: A ⊗ B  (tensor product)
-    public function operatorTensor(Matrix other) -> Matrix {
-        return this.tensorProduct(other);
+    // Define ⊕ as addition
+    public function Vec2 operator⊕(Vec2 other) {
+        return new Vec2(x + other.x, y + other.y);
     }
-
-    private function computeMatrixSqrt() -> Matrix { /* ... */ }
-    private function tensorProduct(Matrix other) -> Matrix { /* ... */ }
 }
 
-function main() -> void {
-    Matrix m = new Matrix(/* ... */);
+const Vec2 v = new Vec2(3.0, 4.0);
+print(√v);       // 5.0
 
-    Matrix sqrtM = √m;         // Clean, mathematical syntax
-    Matrix result = m ⊗ sqrtM; // Reads like math notation
-}
+const Vec2 a = new Vec2(1.0, 2.0);
+const Vec2 b = new Vec2(3.0, 4.0);
+const Vec2 c = a ⊕ b; // Vec2(4.0, 6.0)
 ```
 
-#### Transpiled C++ Output
+Any Unicode symbol can be registered as an operator, giving domain-specific languages (math, physics, graphics) expressive notation.
 
-```cpp
-// √m  becomes:
-auto sqrtM = m.operatorSqrt();
+---
 
-// m ⊗ sqrtM  becomes:
-auto result = m.operatorTensor(sqrtM);
+### Pointers & Memory
+
+```qc
+// Stack-allocated
+int x = 10;
+
+// Raw pointer
+Pointer<int> p = address x;
+print(pointing p); // dereference → 10
+
+// Smart pointers
+UniquePointer<Circle> uc = new Circle(3.0);
+SharedPointer<Circle> sc = new Circle(5.0);
+
+// Manual deallocation (raw pointers only)
+delete p;
 ```
 
 ---
 
-## VS Code Extension
+### Enums
 
-The QuantC VS Code extension (`vscode-extension/`) is written in TypeScript and provides a full IDE experience.
-
-### Features
-
-#### IntelliSense & Autocompletion
-
-- **Keyword completions** — every keyword includes a hover doc explaining its purpose and usage
-- **Type completions** — native types show their C++ equivalent and memory size
-- **Built-in function completions** — signature help with parameter types and return values
-- **Cross-file class resolution** — the extension indexes all `.qc` files in your workspace and suggests classes even from files you haven't opened
-- **Inherited member suggestions** — when calling methods on an instance, the extension walks the full inheritance chain and suggests all available methods, including those from parent classes
-- **Return type inference** — method completions show the inferred or declared return type inline
-- **Import library suggestions** — classes from imported libraries appear in completions with their source shown
-
-#### Diagnostics
-
-- **Syntax highlighting** — full TextMate grammar for all keywords, types, operators, and string literals
-- **Error highlighting** — type mismatches, undefined symbols, and invalid expressions are underlined in real time
-- **Warning hints** — unused variables, shadowed names, missing `override` keywords
-- **Quick Fixes** — one-click fixes for common errors:
-  - Add missing `override` keyword
-  - Auto-import a class used but not imported
-  - Replace deprecated syntax
-  - Add missing `return` statement
-
-#### Code Navigation
-
-- **Go to Definition** — jump to the class or function definition, even across files
-- **Find All References** — locate every use of a symbol in the project
-- **Rename Symbol** — safe rename across all files
-
-#### Snippet Library
-
-| Trigger | Expands To |
-|---|---|
-| `class` | Full class scaffold with constructor |
-| `func` | Function declaration with return type |
-| `for` | For loop with typed iterator |
-| `trycatch` | Try/catch block |
-| `asyncfunc` | Async function with `await` |
-
----
-
-## C++ Transpiler
-
-The transpiler (`transpiler/`) converts `.qc` source files into clean, idiomatic C++17.
-
-### Usage
-
-```bash
-# Transpile a single file
-quantc compile src/Main.qc -o build/Main.cpp
-
-# Transpile an entire project
-quantc build --src src/ --out build/
-
-# Transpile and immediately compile with clang
-quantc run src/Main.qc
-
-# Generate bindings alongside transpilation
-quantc compile src/MyLib.qc --bindings c,cpp,java,python -o build/
-```
-
-### Transpilation Pipeline
-
-```
-.qc source
-     │
-     ▼
- Lexer (tokenize keywords, types, operators)
-     │
-     ▼
- Parser (build AST)
-     │
-     ▼
- Semantic Analyzer (type checking, scope resolution, inheritance validation)
-     │
-     ▼
- IR Generation (intermediate representation)
-     │
-     ▼
- C++17 Code Emitter
-     │
-     ▼
- .cpp + .h output files
-```
-
-### Example
-
-**Input (`Greeter.qc`):**
-
-```quantc
-class Greeter {
-    private string name;
-
-    public function Greeter(string name) {
-        this.name = name;
-    }
-
-    public function greet() -> string {
-        return "Hello, " + this.name + "!";
-    }
+```qc
+enum Direction {
+    NORTH,
+    SOUTH,
+    EAST,
+    WEST
 }
-```
 
-**Output (`Greeter.cpp`):**
+const Direction d = Direction.NORTH;
 
-```cpp
-#include "Greeter.h"
-#include <string>
-
-Greeter::Greeter(std::string name) : name(std::move(name)) {}
-
-std::string Greeter::greet() {
-    return "Hello, " + this->name + "!";
+switch (d) {
+    case Direction.NORTH: print("Going north"); break;
+    default: print("Other direction"); break;
 }
 ```
 
 ---
 
-## Foreign Language Bindings
+## Builtins
 
-QuantC auto-generates bindings so your library can be consumed from C, C++, Java, and Python without any manual glue code.
+QuantC ships with a standard set of built-in functions, available globally:
 
-### C Binding
-
-A plain C header and shared library are generated for maximum portability.
-
-**Generated `quantc_greeter.h`:**
-
-```c
-#ifndef QUANTC_GREETER_H
-#define QUANTC_GREETER_H
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-typedef void* QuantCGreeter;
-
-QuantCGreeter quantc_Greeter_new(const char* name);
-const char* quantc_Greeter_greet(QuantCGreeter self);
-void        quantc_Greeter_free(QuantCGreeter self);
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif // QUANTC_GREETER_H
-```
-
-**Usage from C:**
-
-```c
-#include "quantc_greeter.h"
-#include <stdio.h>
-
-int main(void) {
-    QuantCGreeter g = quantc_Greeter_new("World");
-    printf("%s\n", quantc_Greeter_greet(g));  // Hello, World!
-    quantc_Greeter_free(g);
-    return 0;
-}
-```
+| Function | Description |
+|----------|-------------|
+| `print(x)` | Print to stdout |
+| `sqrt(x)` | Square root |
+| `abs(x)` | Absolute value |
+| `pow(x, y)` | x raised to y |
+| `min(a, b)` / `max(a, b)` | Min/max of two values |
+| `floor(x)` / `ceil(x)` | Floor/ceiling rounding |
+| `sin(x)` / `cos(x)` / `tan(x)` | Trigonometric functions |
+| `asin(x)` / `acos(x)` / `atan(x)` / `atan2(y, x)` | Inverse trig |
+| `sinh(x)` / `cosh(x)` / `tanh(x)` | Hyperbolic functions |
+| `exp(x)` / `log(x)` / `log10(x)` | Exponential and logarithm |
 
 ---
 
-### C++ Binding
+## VSCode Extension
 
-A zero-overhead C++ wrapper is generated on top of the C binding, providing RAII, method chaining, and standard C++ idioms.
+The official **QuantC VSCode Extension** provides a full IDE experience:
 
-**Generated `QuantCGreeter.hpp`:**
+- **Syntax highlighting** — keywords, types, operators, strings, comments, generics, and class structures all themed correctly
+- **Semantic diagnostics** — real-time type checking and error squiggles as you type
+  - Unknown types
+  - Duplicate variable declarations
+  - Uninitialized `const` variables
+  - Type mismatch in assignments
+- **Autocompletion** — suggests keywords, types, builtins, class names from your workspace and imported libraries, instance methods with return types, and inherited class members
+- **Quick fixes** — suggestions to resolve common errors inline
+- **Hover documentation** — explains each keyword, type, and builtin on hover
+- **Command palette** — `QuantC: Compile and Run` triggers semantic analysis on demand
 
-```cpp
-#pragma once
-#include "quantc_greeter.h"
-#include <string>
-#include <stdexcept>
+### Supported File Type
 
-class QuantCGreeterBinding {
-    QuantCGreeter handle_;
-public:
-    explicit QuantCGreeterBinding(std::string const& name)
-        : handle_(quantc_Greeter_new(name.c_str())) {
-        if (!handle_) throw std::runtime_error("Failed to create Greeter");
-    }
-
-    ~QuantCGreeterBinding() { quantc_Greeter_free(handle_); }
-
-    // Non-copyable, movable
-    QuantCGreeterBinding(QuantCGreeterBinding const&) = delete;
-    QuantCGreeterBinding& operator=(QuantCGreeterBinding const&) = delete;
-    QuantCGreeterBinding(QuantCGreeterBinding&&) = default;
-
-    std::string greet() const {
-        return std::string(quantc_Greeter_greet(handle_));
-    }
-};
-```
+Files with the `.qc` extension are automatically recognized.
 
 ---
 
-### Java Binding (JNI)
+## Language Bindings
 
-A JNI wrapper is generated so your QuantC classes can be used from any JVM language (Java, Kotlin, Scala).
+QuantC is designed for interoperability. Compiled output can be consumed from — and can call into — the following ecosystems:
 
-**Generated `Greeter.java`:**
+### C / C++
+QuantC transpiles to C++, so interop is native. Expose a `.qc` class as a C++ header, or `#include` external C/C++ headers directly.
+
+```qc
+// Call C++ code
+@include "mylib.hpp"
+
+function void main() {
+    mylib::initialize();
+}
+```
+
+### Java
+A JNI/JNA binding layer is generated automatically for `public` classes. Java can instantiate QuantC objects and call their methods via the generated `.jar` wrapper.
 
 ```java
-package com.quantc.bindings;
-
-public class Greeter implements AutoCloseable {
-    static {
-        System.loadLibrary("quantc_greeter");
-    }
-
-    private long nativeHandle;
-
-    public Greeter(String name) {
-        this.nativeHandle = nativeNew(name);
-    }
-
-    public String greet() {
-        return nativeGreet(nativeHandle);
-    }
-
-    @Override
-    public void close() {
-        nativeFree(nativeHandle);
-        nativeHandle = 0;
-    }
-
-    private native long   nativeNew(String name);
-    private native String nativeGreet(long handle);
-    private native void   nativeFree(long handle);
-}
+import quantc.Circle;
+Circle c = new Circle(5.0f);
+System.out.println(c.area());
 ```
 
-**Usage from Java:**
-
-```java
-try (var g = new Greeter("World")) {
-    System.out.println(g.greet());  // Hello, World!
-}
-```
-
----
-
-### Python Binding
-
-A CPython extension module is generated using the Python C API, callable from plain Python with no extra dependencies.
-
-**Generated `quantc_greeter.c` (compiled to `quantc_greeter.so`):**
-
-> Automatically built via the generated `setup.py`.
-
-**Usage from Python:**
+### Python
+A Python binding (via `ctypes` / `pybind11`) is generated for all `public` symbols, allowing QuantC code to be imported as a Python module.
 
 ```python
-import quantc_greeter
-
-g = quantc_greeter.Greeter("World")
-print(g.greet())   # Hello, World!
-del g              # Calls destructor automatically
+import quantc
+c = quantc.Circle(5.0)
+print(c.area())
 ```
 
-**Installation:**
+### C Binding
+A flat C API (`extern "C"`) is generated for maximum compatibility with other languages and FFI systems.
+
+```c
+#include "quantc_circle.h"
+QC_Circle* c = qc_circle_new(5.0f);
+printf("%f\n", qc_circle_area(c));
+qc_circle_free(c);
+```
+
+---
+
+## Transpilation
+
+QuantC source is transpiled to idiomatic C++ via the built-in transpiler (`src/transpiler/`). The generated output:
+
+- Uses standard C++17
+- Preserves class hierarchy and visibility modifiers
+- Maps `UniquePointer<T>` → `std::unique_ptr<T>`, `SharedPointer<T>` → `std::shared_ptr<T>`
+- Generates CMake-compatible output for easy compilation
 
 ```bash
-cd build/bindings/python
-pip install .
+# Transpile a file
+qcc compile main.qc -o build/
+
+# Transpile and compile (requires a C++ toolchain)
+qcc run main.qc
 ```
 
 ---
 
-## Calling C/C++ from QuantC
+## Roadmap
 
-QuantC supports **extern declarations** to call into existing C or C++ libraries directly.
-
-```quantc
-// Declare an external C function
-extern "C" function printf(string fmt, ...) -> int;
-
-// Declare a C++ class method
-extern "C++" function std::vector<int>::push_back(int value) -> void;
-
-// Call a C library function
-function main() -> void {
-    int result = printf("Hello from C: %d\n", 42);
-}
-```
-
-### Linking External Libraries
-
-In your `quantc.config.json`:
-
-```json
-{
-  "name": "my-project",
-  "version": "1.0.0",
-  "links": ["m", "pthread", "z"],
-  "includePaths": ["./vendor/mylib/include"],
-  "libPaths": ["./vendor/mylib/lib"]
-}
-```
+- [ ] Full parser and AST for all language constructs
+- [ ] Complete semantic analyser (binary expressions, function calls, class members)
+- [ ] C++ transpiler backend
+- [ ] VSCode hover documentation and autocompletion provider
+- [ ] Java / Python / C binding generators
+- [ ] Custom operator registry in the VSCode extension
+- [ ] Standard library (`Collections`, `IO`, `Math`, `Net`)
+- [ ] Package manager
 
 ---
 
-## Project Structure
-
-```
-quantc/
-├── compiler/                  # Core transpiler (TypeScript)
-│   ├── src/
-│   │   ├── lexer/             # Tokenizer — keywords, types, operators
-│   │   │   ├── Lexer.ts
-│   │   │   ├── Token.ts
-│   │   │   └── keywords.ts    # KEYWORDS, TYPES, BUILTINS sets
-│   │   ├── parser/            # AST construction
-│   │   │   ├── Parser.ts
-│   │   │   └── nodes/         # AST node types
-│   │   ├── analyzer/          # Semantic analysis & type checking
-│   │   │   ├── TypeChecker.ts
-│   │   │   └── ScopeResolver.ts
-│   │   ├── emitter/           # C++17 code generation
-│   │   │   ├── CppEmitter.ts
-│   │   │   └── OperatorMapper.ts   # Unicode → method name mapping
-│   │   └── bindings/          # Foreign binding generators
-│   │       ├── CBindingGen.ts
-│   │       ├── CppBindingGen.ts
-│   │       ├── JavaBindingGen.ts
-│   │       └── PythonBindingGen.ts
-│   └── tests/
-│
-├── vscode-extension/          # VS Code extension (TypeScript)
-│   ├── src/
-│   │   ├── extension.ts       # Entry point — activates providers
-│   │   ├── providers/
-│   │   │   ├── CompletionProvider.ts    # IntelliSense
-│   │   │   ├── HoverProvider.ts         # Hover docs
-│   │   │   ├── DiagnosticsProvider.ts   # Error/warning underlines
-│   │   │   ├── CodeActionProvider.ts    # Quick fixes
-│   │   │   └── DefinitionProvider.ts    # Go-to-definition
-│   │   ├── indexer/
-│   │   │   └── WorkspaceIndexer.ts  # Crawls all .qc files for symbols
-│   │   └── grammar/
-│   │       └── quantc.tmLanguage.json  # TextMate syntax grammar
-│   ├── snippets/
-│   │   └── quantc.json
-│   └── package.json
-│
-├── stdlib/                    # QuantC standard library (written in .qc)
-│   ├── io/
-│   ├── collections/
-│   ├── math/
-│   └── async/
-│
-├── examples/                  # Sample programs
-│   ├── hello_world/
-│   ├── custom_operators/
-│   ├── async_example/
-│   └── bindings_demo/
-│
-├── docs/                      # Extended documentation
-├── quantc.config.json           # Default project config schema
-└── README.md
-```
-
----
-
-## Contributing
-
-Contributions are welcome! Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) before submitting a PR.
-
-### Development Setup
-
-```bash
-git clone https://github.com/your-org/quantc.git
-cd quantc
-npm install
-npm run build
-npm test
-```
-
-### Running Tests
-
-```bash
-# Compiler unit tests
-npm run test:compiler
-
-# Extension tests (requires VS Code)
-npm run test:extension
-
-# End-to-end transpilation tests
-npm run test:e2e
-```
-
-### Reporting Issues
-
-- 🐛 **Transpiler bugs** — open an issue with the `.qc` input and the incorrect C++ output
-- 💡 **Language proposals** — open a discussion with your motivation and a syntax sketch
-- 🔌 **Extension issues** — include your OS, VS Code version, and extension version
-
----
-
-## License
-
-QuantC is released under the [MIT License](LICENSE).
-
----
-
-<div align="center">
-
-Fast to write. Fast to run.
-
-</div>
+> QuantC — the power of C++, the clarity of Java, the expressiveness of something new.
