@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="icons/quantc-icon.svg" width="150" style="vertical-align: middle;" />
+<img src="https://github.com/oksimvey/QuantCExtension/blob/main/icons/quantc-icon.svg" width="150" style="vertical-align: middle;" />
+
+</div>
 
 > A modern, expressive systems language that transpiles to C++ — with Java/C++ familiarity, Haskell-inspired operator definitions, and first-class VSCode tooling.
 
