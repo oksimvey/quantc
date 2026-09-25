@@ -25,9 +25,15 @@ Program Parser::parseProgram() {
             const auto modifiers = parseModifiers();
             if (checkLexeme("class")) {
                 program.classes.push_back(parseClass(modifiers));
+            } else if (checkLexeme("auto") && peek(1).type == TokenType::Identifier) {
+                if (modifiers.visibility != Visibility::Default || modifiers.mutability != Mutability::Mutable ||
+                    modifiers.storage != Storage::Default || modifiers.isAbstract || modifiers.isOverride) {
+                    fail(peek(), "Modifiers are not supported on auto declarations yet");
+                }
+                program.statements.push_back(parseAutoVariable());
             } else if (looksLikeTypedVariable()) {
                 Statement statement;
-                statement.kind = Statement::Kind::Variable;
+                statement.kind = Statement::Kind::VariableDeclaration;
                 statement.variable = parseTypedVariable(modifiers);
                 program.statements.push_back(std::move(statement));
             } else if (modifiers.visibility != Visibility::Default ||
@@ -61,7 +67,7 @@ Modifiers Parser::parseModifiers() {
 }
 
 ClassDecl Parser::parseClass(Modifiers modifiers) {
-    advance(); // class
+    advance();
     ClassDecl declaration;
     declaration.modifiers = modifiers;
     declaration.name = expectIdentifier("Expected class name after 'class'");
@@ -83,7 +89,7 @@ ClassDecl Parser::parseClass(Modifiers modifiers) {
 }
 
 ImportDecl Parser::parseImport() {
-    advance(); // import
+    advance();
     ImportDecl declaration;
     if (check(TokenType::String)) {
         declaration.name = advance().lexeme;
@@ -107,14 +113,25 @@ VariableDecl Parser::parseTypedVariable(Modifiers modifiers) {
     return declaration;
 }
 
+Statement Parser::parseAutoVariable() {
+    advance();
+    Statement statement;
+    statement.kind = Statement::Kind::Assignment;
+    statement.assignment.name = expectIdentifier("Expected variable name after 'auto'");
+    expect(TokenType::Operator, "Expected '=' in auto declaration");
+    if (previous().lexeme != "=") fail(previous(), "Expected '=' in auto declaration");
+    statement.assignment.value = parseExpression();
+    consumeTerminator();
+    return statement;
+}
+
 Statement Parser::parseTopLevelStatement() {
     if (peek().type == TokenType::Identifier && peek(1).lexeme == "=") {
         Statement statement;
-        statement.kind = Statement::Kind::Variable;
-        statement.variable.name = advance().lexeme;
-        statement.variable.inferred = true;
-        advance(); // =
-        statement.variable.initializer = parseExpression();
+        statement.kind = Statement::Kind::Assignment;
+        statement.assignment.name = advance().lexeme;
+        advance();
+        statement.assignment.value = parseExpression();
         consumeTerminator();
         return statement;
     }
@@ -126,9 +143,7 @@ Statement Parser::parseTopLevelStatement() {
     return statement;
 }
 
-std::unique_ptr<Expr> Parser::parseExpression() {
-    return parseBinary(1);
-}
+std::unique_ptr<Expr> Parser::parseExpression() { return parseBinary(1); }
 
 std::unique_ptr<Expr> Parser::parseBinary(int minPrecedence) {
     auto left = parseUnary();
@@ -175,9 +190,7 @@ std::unique_ptr<Expr> Parser::parsePostfix() {
             call->kind = Expr::Kind::Call;
             call->children.push_back(std::move(expression));
             if (!check(TokenType::RightParen)) {
-                do {
-                    call->children.push_back(parseExpression());
-                } while (match(TokenType::Comma));
+                do call->children.push_back(parseExpression()); while (match(TokenType::Comma));
             }
             expect(TokenType::RightParen, "Expected ')' after call arguments");
             expression = std::move(call);
@@ -197,9 +210,7 @@ std::unique_ptr<Expr> Parser::parsePrimary() {
         expression->type = parseTypeRef();
         expect(TokenType::LeftParen, "Expected '(' after type in new expression");
         if (!check(TokenType::RightParen)) {
-            do {
-                expression->children.push_back(parseExpression());
-            } while (match(TokenType::Comma));
+            do expression->children.push_back(parseExpression()); while (match(TokenType::Comma));
         }
         expect(TokenType::RightParen, "Expected ')' after constructor arguments");
         return expression;
@@ -260,9 +271,7 @@ TypeRef Parser::parseTypeRef() {
     type.name = expectIdentifier("Expected type name");
     if (match(TokenType::Less)) {
         if (!check(TokenType::Greater)) {
-            do {
-                type.genericArgs.push_back(parseTypeRef());
-            } while (match(TokenType::Comma));
+            do type.genericArgs.push_back(parseTypeRef()); while (match(TokenType::Comma));
         }
         expect(TokenType::Greater, "Expected '>' after generic type arguments");
     }
@@ -315,9 +324,7 @@ const Token& Parser::peek(std::size_t offset) const {
     return position < tokens_.size() ? tokens_[position] : tokens_.back();
 }
 
-const Token& Parser::previous() const {
-    return index_ == 0 ? tokens_.front() : tokens_[index_ - 1];
-}
+const Token& Parser::previous() const { return index_ == 0 ? tokens_.front() : tokens_[index_ - 1]; }
 
 const Token& Parser::advance() {
     if (!check(TokenType::EndOfFile)) ++index_;
@@ -346,9 +353,7 @@ void Parser::consumeTerminator() {
     if (!isTerminator(peek())) fail(peek(), "Expected ';' or end of line");
 }
 
-void Parser::skipTrivia() {
-    while (match(TokenType::NewLine) || match(TokenType::Semicolon)) {}
-}
+void Parser::skipTrivia() { while (match(TokenType::NewLine) || match(TokenType::Semicolon)) {} }
 
 [[noreturn]] void Parser::fail(const Token& token, const std::string& message) const {
     throw std::runtime_error(
