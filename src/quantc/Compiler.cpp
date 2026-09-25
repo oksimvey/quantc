@@ -1,8 +1,8 @@
 #include "Compiler.h"
 
-#include "codegen/CppGenerator.h"
 #include "lexer/Lexer.h"
 #include "parser/Parser.h"
+#include "semantic/SemanticAnalyzer.h"
 
 #include <fstream>
 #include <sstream>
@@ -11,15 +11,17 @@
 
 namespace quantc {
 
-std::string Compiler::transpileFile(const std::filesystem::path& inputPath) {
+std::vector<GeneratedFile> Compiler::transpileProject(const std::filesystem::path& inputPath) {
     std::unordered_set<std::string> visited;
-    auto program = loadProgram(inputPath, visited);
-    return CppGenerator{}.generate(program);
+    auto program = loadProgram(inputPath, visited, true);
+    const auto analysis = SemanticAnalyzer{}.analyze(program);
+    return CppGenerator{analysis}.generate(program);
 }
 
 Program Compiler::loadProgram(
     const std::filesystem::path& inputPath,
-    std::unordered_set<std::string>& visited) {
+    std::unordered_set<std::string>& visited,
+    bool isEntry) {
     const auto absolute = std::filesystem::absolute(inputPath).lexically_normal();
     const auto key = absolute.string();
     if (visited.contains(key)) return {};
@@ -31,14 +33,14 @@ Program Compiler::loadProgram(
     Program merged;
 
     for (const auto& import : current.imports) {
-        bool alreadyDeclared = false;
+        bool declaredLocally = false;
         for (const auto& declaration : current.classes) {
             if (declaration.name == import.name) {
-                alreadyDeclared = true;
+                declaredLocally = true;
                 break;
             }
         }
-        if (alreadyDeclared) continue;
+        if (declaredLocally) continue;
 
         std::filesystem::path importedPath = import.name;
         if (importedPath.extension().empty()) importedPath += ".qc";
@@ -48,7 +50,7 @@ Program Compiler::loadProgram(
                 "Unable to resolve import '" + import.name + "' from " + absolute.string());
         }
 
-        auto imported = loadProgram(importedPath, visited);
+        auto imported = loadProgram(importedPath, visited, false);
         for (auto& declaration : imported.classes) {
             merged.classes.push_back(std::move(declaration));
         }
@@ -57,9 +59,17 @@ Program Compiler::loadProgram(
     for (auto& declaration : current.classes) {
         merged.classes.push_back(std::move(declaration));
     }
-    for (auto& statement : current.statements) {
-        merged.statements.push_back(std::move(statement));
+
+    if (isEntry) {
+        for (auto& statement : current.statements) {
+            merged.statements.push_back(std::move(statement));
+        }
+    } else if (!current.statements.empty()) {
+        throw std::runtime_error(
+            "Imported module '" + absolute.string() + "' contains top-level executable statements; "
+            "only the entry file may contain them for now");
     }
+
     return merged;
 }
 
