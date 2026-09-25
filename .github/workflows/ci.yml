@@ -2,7 +2,7 @@ name: QuantC CI
 
 on:
   push:
-    branches: [main, feature/transpiler-bootstrap]
+    branches: [main, feature/split-codegen-dynamic-auto]
   pull_request:
     branches: [main]
 
@@ -14,19 +14,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configure
-        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+      - name: Configure with Clang
+        run: cmake -S . -B ci-build -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=clang++
 
       - name: Build QuantC
-        run: cmake --build build --config Release
+        run: cmake --build ci-build --config Release
 
-      - name: Transpile import smoke test
-        run: ./build/QuantC tests/import/main.qc -o build/import-smoke.cpp
+      - name: Transpile dynamic auto test
+        run: ./ci-build/QuantC tests/dynamic/main.qc -o ci-build/generated
 
-      - name: Compile generated C++
-        run: c++ -std=c++23 build/import-smoke.cpp -o build/import-smoke
+      - name: Verify split output
+        run: |
+          test -f ci-build/generated/main.cpp
+          test -f ci-build/generated/Dog.h
+          grep -q 'std::variant<std::string, Dog> dog' ci-build/generated/main.cpp
+          grep -q '#include "Dog.h"' ci-build/generated/main.cpp
+
+      - name: Compile generated C++ with Clang
+        run: clang++ -std=c++23 ci-build/generated/main.cpp -Ici-build/generated -o ci-build/generated/app
 
       - name: Run generated program
         run: |
-          output="$(./build/import-smoke)"
+          output="$(./ci-build/generated/app)"
           test "$output" = "Woof"

@@ -1,21 +1,24 @@
 #pragma once
 
 #include "ast/Ast.h"
+#include "codegen/CppGenerator.h"
 
 #include <filesystem>
 #include <string>
 #include <unordered_set>
+#include <vector>
 
 namespace quantc {
 
 class Compiler {
 public:
-    [[nodiscard]] std::string transpileFile(const std::filesystem::path& inputPath);
+    [[nodiscard]] std::vector<GeneratedFile> transpileProject(const std::filesystem::path& inputPath);
 
 private:
     [[nodiscard]] Program loadProgram(
         const std::filesystem::path& inputPath,
-        std::unordered_set<std::string>& visited);
+        std::unordered_set<std::string>& visited,
+        bool isEntry);
     [[nodiscard]] static std::string readFile(const std::filesystem::path& path);
 };
 
