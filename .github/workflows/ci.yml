@@ -1,0 +1,32 @@
+name: QuantC CI
+
+on:
+  push:
+    branches: [main, feature/transpiler-bootstrap]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-smoke-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build QuantC
+        run: cmake --build build --config Release
+
+      - name: Transpile import smoke test
+        run: ./build/QuantC tests/import/main.qc -o build/import-smoke.cpp
+
+      - name: Compile generated C++
+        run: c++ -std=c++23 build/import-smoke.cpp -o build/import-smoke
+
+      - name: Run generated program
+        run: |
+          output="$(./build/import-smoke)"
+          test "$output" = "Woof"
