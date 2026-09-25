@@ -13,7 +13,6 @@ namespace quantc {
 class Parser {
 public:
     explicit Parser(std::vector<Token> tokens);
-
     [[nodiscard]] Program parseProgram();
 
 private:
@@ -21,6 +20,7 @@ private:
     [[nodiscard]] ClassDecl parseClass(Modifiers modifiers);
     [[nodiscard]] ImportDecl parseImport();
     [[nodiscard]] VariableDecl parseTypedVariable(Modifiers modifiers);
+    [[nodiscard]] Statement parseAutoVariable();
     [[nodiscard]] Statement parseTopLevelStatement();
 
     [[nodiscard]] std::unique_ptr<Expr> parseExpression();
