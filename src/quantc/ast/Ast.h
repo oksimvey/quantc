@@ -41,21 +41,32 @@ struct Expr {
     Kind kind{Kind::Identifier};
     std::string value;
     TypeRef type;
+    std::string resolvedType;
     std::vector<std::unique_ptr<Expr>> children;
 };
 
 struct VariableDecl {
     std::string name;
     TypeRef type;
-    bool inferred{false};
     Modifiers modifiers;
     std::unique_ptr<Expr> initializer;
 };
 
+struct AssignmentStmt {
+    std::string name;
+    std::unique_ptr<Expr> value;
+    bool inferredTarget{false};
+    bool declares{false};
+    bool dynamic{false};
+    std::string assignedType;
+    std::vector<std::string> possibleTypes;
+};
+
 struct Statement {
-    enum class Kind { Variable, Expression };
+    enum class Kind { VariableDeclaration, Assignment, Expression };
     Kind kind{Kind::Expression};
     VariableDecl variable;
+    AssignmentStmt assignment;
     std::unique_ptr<Expr> expression;
 };
 
